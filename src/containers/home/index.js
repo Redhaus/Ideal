@@ -2,6 +2,11 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Button } from 'semantic-ui-react';
+import SubHeader from '../../components/subheader';
+import CourseHeader from '../../components/courseHeader';
+import CourseLexisReading from '../../components/courseLexisReading';
+
 import {
   increment,
   incrementAsync,
@@ -10,8 +15,14 @@ import {
 } from '../../modules/counter'
 
 const Home = props => (
+ 
   <div>
+  <SubHeader/>
+  <CourseHeader/>
+  <CourseLexisReading/>
+  
     <h1>Home</h1>
+    <Button>Click Here</Button>
     <p>Count: {props.count}</p>
 
     <p>
