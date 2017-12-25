@@ -1,72 +1,125 @@
 import React from 'react'
 import { Grid, Checkbox, Popup} from 'semantic-ui-react'
 
-const CourseFurtherReadings = () => {
-    
-    const title2 = (
-        <div>
-        <Checkbox label='The Odyssey translated by Ian Johnston' />
-            
-        </div>
-    )
+const CourseFurtherReadings = (props) => {
 
-    const titlePopup2 = (
-        <div>
-        <h4>The Odyssey</h4>
-        <p>Homer's Odyssey, composed in the eighth century BC, is the most influential 
-            and most popular epic poem in our cultural traditions. The story of Odysseus' 
-            adventures on his return home from the Trojan War has inspired the imaginations 
-            of readers for centuries and has become an integral part of our civilization's 
-            greatest artistic achievements, exerting its appeal on writers, painters, poets, 
-            film makers, and others, right up to the present time. Ian Johnston's abridged 
-            version of this magnificent poem, approximately one third the length of the original, 
-            is based upon his acclaimed new translation of the entire work. </p>
-        <p>Every line in the abridged text comes from Homer's poem, and a few short summary 
-            comments are included to keep the narrative thrust of the action coherent. 
-            This abridgment also has explanatory footnotes, a glossary of names and places, 
-            a floor plan of Odysseus' palace, and a map of his route home. It thus serves as 
-            an ideal entry into Homer's poem for those who do not have the time yet to tackle the full poem.</p>
+
+  // const handleOnChange 
+
+  const handleOnClick = (e, data) => {
+
+    const activeTarget = e.target.parentNode.parentNode;
+
+    if(data.checked){
+      activeTarget.className += " active";
+    }else{
+      activeTarget.classList.remove("active");
+    }
+
+  }
+
+  const handleReadings = (readings) => {
+
+    return readings.map( (item, key) => {
+
+      const title = (
+          <Grid.Column >
+            <div className="further-reading">
+              <h5>{item.author} | {item.date}</h5>
+              <Checkbox label={item.title}  value={item.title} onClick={handleOnClick} /> 
+            </div>
+        </Grid.Column>
+          
+      )
+
+      const essaytitle = (
+        <Grid.Column>
+          <div className="further-reading">
+            <h5>{item.source} </h5>
+            <Checkbox label={item.title} value={item.title} onClick={handleOnClick} /> 
+            <p> 
+            {item.author ? `${item.author}` : ''} 
+            {item.author && item.date ? ' | ': ''}       
+            {item.date ? `${item.date}` : ''}
+            </p>    
+          </div>
+      </Grid.Column>
         
-        </div>
     )
 
-    const style = {
+      const popup = (
+        <div>
+          <h4>{item.title}</h4>
+          <p>{item.description}</p>
+        </div>
+
+      )
+
+      const poemTemplate = (
+        <Popup key={key} trigger={title} content={popup} size='tiny' />
+      )
+
+      const essayTemplate = (
+
+        <Popup key={key} trigger={essaytitle} content={popup} size='tiny' />
+        
        
-        width: '30em' 
+        
+      )
+
+      // console.log(readings[key].source)
+
+      if(readings[key].source){
+        return essayTemplate;
+      }else{
+        return poemTemplate;
       }
-    
-    return(
-  <Grid>
-
-
-    <Grid.Row columns={3}>
-      <Grid.Column>
-        
-        <p>Beginner</p>
-        <h4>Homer 850BCE-800BCE</h4>
-        <Popup trigger={title2} content={titlePopup2} size='tiny' width='huge' flowing style={style}/>
-        
-        
-
-      </Grid.Column>
-      <Grid.Column>
-        <p>Intermediate</p>
-        <h4>Homer 850BCE-800BCE</h4>
-        <Checkbox label='The Odyssey' />
-
-      </Grid.Column>
-      <Grid.Column>
-        <p>Advanced</p>
-        <h4>Homer 850BCE-800BCE</h4>
-        <Checkbox label='Metamorphoses' />
-        <h4>Homer 850BCE-800BCE</h4>
-        <Checkbox label='Tales from Ovid' />
 
       
 
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-)}
+
+
+    })
+
+
+
+
+  }
+
+    
+    return(
+      <Grid>
+        <Grid.Row columns={1}>
+          <Grid.Column>
+            <div><h4>Further Reading</h4></div>
+          </Grid.Column>
+
+          <Grid.Column>
+          <h3>Poetry</h3>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row columns={3}>
+          {handleReadings(props.readings.poems)}
+        </Grid.Row>
+
+
+
+        <Grid.Row columns={1}>
+
+          <Grid.Column>
+          <h3>Essays</h3>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row columns={3}>
+          {handleReadings(props.readings.essays)}
+        </Grid.Row>
+
+
+
+      </Grid>
+    )
+}
 
 export default CourseFurtherReadings;

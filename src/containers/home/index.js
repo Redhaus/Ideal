@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react';
 import SubHeader from '../../components/subheader';
 import CourseHeader from '../../components/courseHeader';
 import CourseLexisReading from '../../components/courseLexisReading';
+import CourseQuestionsAssignments from '../../components/courseQuestionsAssignments';
 
 import {
   increment,
@@ -20,6 +21,7 @@ const Home = props => (
   <SubHeader/>
   <CourseHeader/>
   <CourseLexisReading/>
+  <CourseQuestionsAssignments/>
   
     <h1>Home</h1>
     <Button>Click Here</Button>
