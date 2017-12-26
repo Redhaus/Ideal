@@ -1,22 +1,9 @@
 import React from 'react'
 import { Grid, Checkbox, Popup} from 'semantic-ui-react'
+import { handleOnClick } from '../utils/utils'
 
 const PrimaryReadings = (props) => {
 
-
-  const handleOnClick = (e, data) => {
-    
-        // get parent div
-        const activeTarget = e.target.parentNode.parentNode;
-    
-        // check if active or not to add and remove class
-        if(data.checked){
-          activeTarget.className += " active";
-        }else{
-          activeTarget.classList.remove("active");
-        }
-    
-  }
 
 
 

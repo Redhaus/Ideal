@@ -1,32 +1,20 @@
 import React from 'react'
 import { Grid, Checkbox, Popup} from 'semantic-ui-react'
+import { handleOnClick } from '../utils/utils';
 
 const CourseFurtherReadings = (props) => {
 
 
-  // const handleOnChange 
-
-  const handleOnClick = (e, data) => {
-
-    const activeTarget = e.target.parentNode.parentNode;
-
-    if(data.checked){
-      activeTarget.className += " active";
-    }else{
-      activeTarget.classList.remove("active");
-    }
-
-  }
 
   const handleReadings = (readings) => {
 
     return readings.map( (item, key) => {
 
       const title = (
-          <Grid.Column >
+        <Grid.Column >
             <div className="further-reading">
               <h5>{item.author} | {item.date}</h5>
-              <Checkbox label={item.title}  value={item.title} onClick={handleOnClick} /> 
+              <Checkbox label={item.title} desc={item.description}  value={item.title} onClick={handleOnClick} /> 
             </div>
         </Grid.Column>
           
@@ -36,23 +24,21 @@ const CourseFurtherReadings = (props) => {
         <Grid.Column>
           <div className="further-reading">
             <h5>{item.source} </h5>
-            <Checkbox label={item.title} value={item.title} onClick={handleOnClick} /> 
+            <Checkbox label={item.title} desc={item.description}  onClick={handleOnClick} /> 
             <p> 
             {item.author ? `${item.author}` : ''} 
             {item.author && item.date ? ' | ': ''}       
             {item.date ? `${item.date}` : ''}
             </p>    
           </div>
-      </Grid.Column>
-        
-    )
+        </Grid.Column>
+      )
 
       const popup = (
         <div>
           <h4>{item.title}</h4>
           <p>{item.description}</p>
         </div>
-
       )
 
       const poemTemplate = (
@@ -60,14 +46,9 @@ const CourseFurtherReadings = (props) => {
       )
 
       const essayTemplate = (
-
         <Popup key={key} trigger={essaytitle} content={popup} size='tiny' />
-        
-       
-        
       )
 
-      // console.log(readings[key].source)
 
       if(readings[key].source){
         return essayTemplate;
@@ -75,14 +56,7 @@ const CourseFurtherReadings = (props) => {
         return poemTemplate;
       }
 
-      
-
-
-
     })
-
-
-
 
   }
 
@@ -95,7 +69,7 @@ const CourseFurtherReadings = (props) => {
           </Grid.Column>
 
           <Grid.Column>
-          <h3>Poetry</h3>
+            <h3>Poetry</h3>
           </Grid.Column>
         </Grid.Row>
 
@@ -103,21 +77,15 @@ const CourseFurtherReadings = (props) => {
           {handleReadings(props.readings.poems)}
         </Grid.Row>
 
-
-
         <Grid.Row columns={1}>
-
           <Grid.Column>
-          <h3>Essays</h3>
+            <h3>Essays</h3>
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row columns={3}>
           {handleReadings(props.readings.essays)}
         </Grid.Row>
-
-
-
       </Grid>
     )
 }

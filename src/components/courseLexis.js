@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Checkbox, Popup } from 'semantic-ui-react'
+import { handleOnClick } from '../utils/utils';
 
 const CourseLexis = (props) => {
 
@@ -12,7 +13,12 @@ const list = props.words;
       
           // item template
           const title = (
-            <Checkbox label={item.word} />
+            <Grid.Column>  
+              <div className="lexis-guide">
+              <Checkbox label={item.word} desc={item.def} onClick={handleOnClick} />
+              </div>
+            </Grid.Column>    
+
           )
       
           const popup = (
@@ -22,14 +28,12 @@ const list = props.words;
             </div>
           )
 
-          return (
-            <Grid.Column key={key}>  
-            <div>
-              <Popup trigger={title} content={popup} size='tiny'  />
-            </div>
-            </Grid.Column>    
-        
+          const template = (
+            <Popup key={key} trigger={title} content={popup} size='tiny'  />
+            
           )
+
+          return template
       });  // close your map
     };  // close renderList
   
