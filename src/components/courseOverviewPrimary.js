@@ -26,6 +26,7 @@ return (
   <Grid celled>
     <Grid.Row>
       <Grid.Column width={5}>
+        <h4>{primarydata.category}</h4> 
         <CourseOverview title={title} popup={popup} />
       </Grid.Column>
       <Grid.Column width={11}>

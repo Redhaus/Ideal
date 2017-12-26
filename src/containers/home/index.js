@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 // import { Button } from 'semantic-ui-react';
 import SubHeader from '../../components/subheader';
-import CourseHeader from '../../components/courseHeader';
+import CourseOverviewPrimary from '../../components/courseOverviewPrimary';
 import CourseLexisReading from '../../components/courseLexisReading';
 import CourseQuestionsAssignments from '../../components/courseQuestionsAssignments';
 import CourseBaseSegue from '../../components/courseBaseSegue';
@@ -20,7 +20,7 @@ const Home = props => (
  
   <div>
   <SubHeader/>
-  <CourseHeader/>
+  <CourseOverviewPrimary/>
   <CourseLexisReading/>
   <CourseQuestionsAssignments/>
   <CourseBaseSegue/>

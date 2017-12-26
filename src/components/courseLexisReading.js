@@ -9,7 +9,7 @@ const CourseLexisReading = () => {
 
 
 return(
-  <Grid celled>
+  <Grid>
     <Grid.Row>
       <Grid.Column width={5}>
         <CourseLexis words={lexisOne}/>

@@ -9,7 +9,7 @@ const CourseBaseSegue = () => {
 
 
 return (
-  <Grid celled>
+  <Grid>
     <Grid.Row>
       <Grid.Column width={5}>
       <h4>Base Goals</h4>

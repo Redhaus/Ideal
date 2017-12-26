@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Form } from 'semantic-ui-react'
 
 const CourseQuestionsAssignments = () => (
-  <Grid celled>
+  <Grid>
     <Grid.Row>
       <Grid.Column width={5}>
 

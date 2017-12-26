@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Checkbox, Popup} from 'semantic-ui-react'
+import { Grid, Checkbox, Popup, Divider } from 'semantic-ui-react'
 import { handleOnClick } from '../utils/utils';
 
 const CourseFurtherReadings = (props) => {
@@ -8,28 +8,28 @@ const CourseFurtherReadings = (props) => {
 
   const handleReadings = (readings) => {
 
-    return readings.map( (item, key) => {
+    return readings.map((item, key) => {
 
       const title = (
         <Grid.Column >
-            <div className="further-reading">
-              <h5>{item.author} | {item.date}</h5>
-              <Checkbox label={item.title} desc={item.description}  value={item.title} onClick={handleOnClick} /> 
-            </div>
+          <div className="further-reading">
+            <h5>{item.author} | {item.date}</h5>
+            <Checkbox label={item.title} desc={item.description} value={item.title} onClick={handleOnClick} />
+          </div>
         </Grid.Column>
-          
+
       )
 
       const essaytitle = (
         <Grid.Column>
           <div className="further-reading">
             <h5>{item.source} </h5>
-            <Checkbox label={item.title} desc={item.description}  onClick={handleOnClick} /> 
-            <p> 
-            {item.author ? `${item.author}` : ''} 
-            {item.author && item.date ? ' | ': ''}       
-            {item.date ? `${item.date}` : ''}
-            </p>    
+            <Checkbox label={item.title} desc={item.description} onClick={handleOnClick} />
+            <p>
+              {item.author ? `${item.author}` : ''}
+              {item.author && item.date ? ' | ' : ''}
+              {item.date ? `${item.date}` : ''}
+            </p>
           </div>
         </Grid.Column>
       )
@@ -50,9 +50,9 @@ const CourseFurtherReadings = (props) => {
       )
 
 
-      if(readings[key].source){
+      if (readings[key].source) {
         return essayTemplate;
-      }else{
+      } else {
         return poemTemplate;
       }
 
@@ -60,34 +60,38 @@ const CourseFurtherReadings = (props) => {
 
   }
 
-    
-    return(
-      <Grid>
-        <Grid.Row columns={1}>
-          <Grid.Column>
-            <div><h4>Further Reading</h4></div>
-          </Grid.Column>
 
-          <Grid.Column>
-            <h3>Poetry</h3>
-          </Grid.Column>
-        </Grid.Row>
+  return (
+    <Grid>
+      <Grid.Row columns={1}>
+        <Grid.Column>
+          <div><h4>Further Reading</h4></div>
+          <Divider />
 
-        <Grid.Row columns={3}>
-          {handleReadings(props.readings.poems)}
-        </Grid.Row>
+        </Grid.Column>
 
-        <Grid.Row columns={1}>
-          <Grid.Column>
-            <h3>Essays</h3>
-          </Grid.Column>
-        </Grid.Row>
+        <Grid.Column>
+          <h3>Poetry</h3>
+        </Grid.Column>
+      </Grid.Row>
 
-        <Grid.Row columns={3}>
-          {handleReadings(props.readings.essays)}
-        </Grid.Row>
-      </Grid>
-    )
+      <Grid.Row columns={3}>
+        {handleReadings(props.readings.poems)}
+      </Grid.Row>
+
+      <Grid.Row columns={1}>
+        <Grid.Column>
+          <Divider />
+
+          <h3>Essays</h3>
+        </Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row columns={3}>
+        {handleReadings(props.readings.essays)}
+      </Grid.Row>
+    </Grid>
+  )
 }
 
 export default CourseFurtherReadings;
