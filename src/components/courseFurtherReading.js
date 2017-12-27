@@ -17,7 +17,6 @@ const CourseFurtherReadings = (props) => {
             <Checkbox label={item.title} desc={item.description} value={item.title} onClick={handleOnClick} />
           </div>
         </Grid.Column>
-
       )
 
       const essaytitle = (

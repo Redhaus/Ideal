@@ -18,7 +18,7 @@ const SubHeader = () => {
 
 
 return (
-    <Grid padded>
+    <Grid>
       <Grid.Row>
         <Grid.Column width={5}>
             <h5>{primarydata.unit}</h5>

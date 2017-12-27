@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Checkbox, Popup, Divider } from 'semantic-ui-react'
+import { Grid, Popup, Divider, Checkbox } from 'semantic-ui-react'
 import { handleOnClick } from '../utils/utils';
 
 const CourseLexis = (props) => {
@@ -18,7 +18,6 @@ const CourseLexis = (props) => {
             <Checkbox label={item.word} desc={item.def} onClick={handleOnClick} />
           </div>
         </Grid.Column>
-
       )
 
       const popup = (
@@ -27,10 +26,9 @@ const CourseLexis = (props) => {
           <p>{item.def}</p>
         </div>
       )
-
+      
       const template = (
-        <Popup key={key} trigger={title} content={popup} size='tiny' />
-
+        <Popup key={key} trigger={ title } content={ popup } size='tiny' />
       )
 
       return template

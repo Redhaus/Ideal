@@ -18,12 +18,8 @@ const popup = (
     </div>
 )
 
-
-// console.log(primarydata.primaryRollover);
-
-
 return (
-  <Grid celled>
+  <Grid>
     <Grid.Row>
       <Grid.Column width={5}>
         <h4>{primarydata.category}</h4> 

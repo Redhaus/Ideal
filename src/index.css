@@ -58,3 +58,13 @@ button:disabled {
 .active {
   background-color: #eeeeee;
 }
+
+.quote {
+  padding: 40px 5px 5px 5px;
+  font-style: italic;
+}
+
+.quoteContainer {
+
+  background-color: #eeeeee;
+}
