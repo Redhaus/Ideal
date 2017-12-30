@@ -4,6 +4,10 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import App from './containers/app'
+// import '../src/css/semantic.css';
+// import '../src/css/materialize.css';
+
+
 
 import 'sanitize.css/sanitize.css'
 import './index.css'

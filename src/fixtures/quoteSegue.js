@@ -8,5 +8,9 @@ export const segueData = {
 
 export const quoteData = {
     quote: 'I therefore claim to show, not how men think in myths, but how myths operate in men’s minds without their being aware of the fact.',
-    author: 'Levi Strauss',
+    author: 'Levi Strauss'
+}
+
+export const baseData = {
+    rollover: 'These goals indicate the most basic goals that a teacher and student should accomplish for the unit. The requirement of producing an ‘argument’ every month is based on the philosophy that every performance is an argument. Despite this open understanding of what an argument is, advanced students are required to produce an academic writing every unit.'
 }

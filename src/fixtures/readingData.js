@@ -205,37 +205,43 @@ const readings = {
                     date: '18 April 2012',
                     title: 'Myths We Don’t Outgrow',
                     source: 'The New Yorker',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 },{
                     author: '',
                     date: '',
                     title: 'Hegel’s Dialectics',
                     source: 'The Stanford Encyclopedia',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 },{
                     author: 'Roland Barthes',
                     date: '',
                     title: 'Myth Today',
                     source: 'from Mythologies',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 },{
                     author: 'Mark C. Taylor',
                     date: '28 June 1992',
                     title: 'Ye Shall Be as Goddesses',
                     source: 'NY Times',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 },{
                     author: 'Robert J. Zimmer',
                     date: '1 March 2013',
                     title: 'The Myth of the Successful College Dropout',
                     source: 'The Atlantic',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 },{
                     author: 'Frank Furedi',
                     date: '6 Nov 2015',
                     title: 'Books Are Dangerous',
                     source: 'Aeon',
-                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
+                    link: 'http://google.com'
                 }]
             }
         }

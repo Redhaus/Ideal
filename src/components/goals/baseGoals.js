@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Popup, Checkbox } from 'semantic-ui-react';
-import { handleOnClick } from '../utils/utils';
+import { handleOnClick, style, popSize } from '../../utils/utils';
 
 
 const BaseGoals = (props) => {
@@ -26,7 +26,7 @@ const BaseGoals = (props) => {
             )
                 
             const template = (
-                <Popup key={key} trigger={title} content={popup} size='tiny' />
+                <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted/>
             )
 
             return template;
@@ -39,7 +39,7 @@ const BaseGoals = (props) => {
     
 
         return(
-            <div>
+            <div className="top-padding">
                 <Grid>
                 <Grid.Row columns={1}>
                 {renderGoals(props.goals.unitOne)}

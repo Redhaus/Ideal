@@ -1,10 +1,14 @@
 import React from 'react'
-import { Grid, Checkbox, Popup, Divider } from 'semantic-ui-react'
-import { handleOnClick } from '../utils/utils';
+import { Grid, Checkbox, Popup, Divider, Icon } from 'semantic-ui-react'
+import { handleOnClick, style, iconSize, iconColor, popSize } from '../../utils/utils';
 
 const CourseFurtherReadings = (props) => {
 
+  // const icondata = [
+  //   "color='red",
+  //   "size='huge'"
 
+  // ]
 
   const handleReadings = (readings) => {
 
@@ -14,7 +18,18 @@ const CourseFurtherReadings = (props) => {
         <Grid.Column >
           <div className="further-reading">
             <h5>{item.author} | {item.date}</h5>
-            <Checkbox label={item.title} desc={item.description} value={item.title} onClick={handleOnClick} />
+            <Checkbox label={item.title}
+                desc={item.description}
+                value={item.title}
+                onClick={handleOnClick}
+            />
+            <a href={item.link} target="blank">
+                <Icon size={iconSize}
+                  color={iconColor}
+                  name="download"
+                  link
+                  className="icon-right" />
+            </a>
           </div>
         </Grid.Column>
       )
@@ -22,12 +37,21 @@ const CourseFurtherReadings = (props) => {
       const essaytitle = (
         <Grid.Column>
           <div className="further-reading">
-            <h5>{item.source} </h5>
+            <h5>{item.source}  
+                <a href={item.link} target="blank">
+                <Icon size={iconSize} 
+                    color={iconColor} 
+                    name="download" 
+                    link 
+                    className="icon-right"/> 
+                </a>
+            </h5>
             <Checkbox label={item.title} desc={item.description} onClick={handleOnClick} />
             <p>
               {item.author ? `${item.author}` : ''}
               {item.author && item.date ? ' | ' : ''}
               {item.date ? `${item.date}` : ''}
+
             </p>
           </div>
         </Grid.Column>
@@ -41,11 +65,11 @@ const CourseFurtherReadings = (props) => {
       )
 
       const poemTemplate = (
-        <Popup key={key} trigger={title} content={popup} size='tiny' />
+        <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
       )
 
       const essayTemplate = (
-        <Popup key={key} trigger={essaytitle} content={popup} size='tiny' />
+        <Popup key={key} trigger={essaytitle} content={popup} size={popSize} style={style} inverted />
       )
 
 

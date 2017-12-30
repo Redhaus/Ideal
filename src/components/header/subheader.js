@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Popup } from 'semantic-ui-react';
-import primarydata from '../fixtures/primaryData';
+import primarydata from '../../fixtures/primaryData';
+import {style, popSize} from '../../utils/utils';
 
 
 const SubHeader = () => {
@@ -24,7 +25,7 @@ return (
             <h5>{primarydata.unit}</h5>
         </Grid.Column>
         <Grid.Column width={11} textAlign='right'>
-            <Popup trigger={title} content={popup} size="tiny"/>
+            <Popup trigger={title} content={popup} size={popSize} style={style} inverted/>
         </Grid.Column>
       </Grid.Row>
     </Grid>

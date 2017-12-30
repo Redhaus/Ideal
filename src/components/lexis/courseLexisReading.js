@@ -1,9 +1,9 @@
 import React from 'react'
 import { Grid } from 'semantic-ui-react'
-import CourseLexis from '../components/courseLexis';
-import CourseFurtherReadings from '../components/courseFurtherReading';
-import lexisOne from '../fixtures/lexisData';
-import readings from '../fixtures/readingData';
+import CourseLexis from './courseLexis';
+import CourseFurtherReadings from './courseFurtherReading';
+import lexisOne from '../../fixtures/lexisData';
+import readings from '../../fixtures/readingData';
 
 const CourseLexisReading = () => {
 

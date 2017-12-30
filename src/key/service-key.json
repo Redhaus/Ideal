@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ideal-edu",
+  "private_key_id": "79694b1cf4e0eb928aed4b7cb7c4e5ef8b4398bc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+nXs4HxlA3pnx\nq2w3Is2xPOCsvKQBySl0Ez+XuxhLwR9QG/Hl+T88Qp/qzk+g7T+JJ58PuZcOjU9+\nfMQxC1LcGsOomZkWnSXCLUrBuDVwCB5OILTfVsfo11ng+YRzf3QVqE4ZBT6ZVtn0\neYcufy1t7d9zkT+lznO92AxC++jiFR9TDvUjY76k5On01N0G3mIHd/DZXo/Uudle\n5YfArkr7A+3o7sC8PX01mFgEm1vyXcgMNRtczQnA6vos55Kpbmh65CqDC5vJOUV3\nWzaHQnb7B2/CUitMWntC/0BCcVq46UwunCIvDhoPF3j5zNcnYR9E3SlUu802srFA\nxKo302vbAgMBAAECggEAO1MuH2hmZq8hQHr2wi490HS/BGPts3SVR0AaYbHkPOeN\nRFR+M/IgATRHK0Asvkw4owpG0hET9355iEdylEUO89wMmzO61rPwJYANLT+Uuhp8\nvBon0P7kVw53NbLSy1OWoIryS407T2Qdj54nOYxxai5HhmNlaMhZc3ODVXGrqHka\nM6C3vkckIxim69YIAkZ5fzjThO6ZrZB5taaIVa2m0chxSTNWcL2MYhllSyxOCipK\n4vOgoxMCUtbAq7BWLp7AAM2awTmnaKvbDEBQUrb9acd1sG6BUa+BJi1UjF1x5/9v\nxItMr4oPgMY9mWgdPthXG0xJBmivRe/ojmI+mXgTqQKBgQD1adri6BSjk4BN9bIJ\nJ3oIubyLuDRT7F1TxeSRgwFROa9cu63Q4b/z4AKkIHrmgaqKATuXA70ZyMTt9lv7\n155Ktl47SqMI1XMV/jp+oisMrOkTAmIkbDeGoJVSMBMI/M2Yx3BTWY1mqjKB+Kvi\nr4iiY1qiMONtWC7AGF/+SN7qBwKBgQDG1nqAhCSkFS+ekDy41Y7/4e229teKj9aW\nkJqsKb69y1SA4+YJF6AzTXRgDodV5N3m79IZkaIpmtT84gcUJy9OiIwqTKXdT+Gz\nUZNTXLKBM2l19z8wNADuqgnoIGASr621PFWMmufrJaqWCnUmiLgep0586jccxurg\nxnYa38XKjQKBgQCtMa5rElR2eINFAY9KzJRgEgyRIkezrozSsUc0thq44xfyPvVV\nA+y+xKm4gL+ba4kaafJPCjFrP/hS49lYq3unyHpKJ8tVUaYtsERB2Fq/UEwQwU7X\n25N4LF4VKZ5VamwCVUXdXMbg3F5WwVM04KJxz+JHsm7eXSxpHwqn32+KAwKBgCel\nHfm/3zpkCwGXirPjyMZWOrpvTxyOf1+3508KZ8CZ6Phl+Di54DQ6bki0vOEwZ9oi\n2QZGFkorV+ov+u9WvMTwztmkPLH6umqxiill4yWFpbJioNOwmrr7ZkxFIEK5im4H\nYJtPS4yEDxYpcaBEREnAXBLl9CUluDEnAOds1JgFAoGBAMGUPKpAfhvn62zOfDhI\nFXx/8M7jheyKgW9uSAC6r4RysmNu8GeMBCzDO2DTBe+Z0TAls164fx9M5Q4wRlCk\nl47z71h9VBlUmXGg5zKqgUM/llnMwSiA3Ou/rlfhRGVaVKTI6X4btZE9RSoh5gSZ\nhhgSN7eNnmOMdMgPrCDy31v0\n-----END PRIVATE KEY-----\n",
+  "client_email": "ideal-edu@appspot.gserviceaccount.com",
+  "client_id": "101878532577983197301",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ideal-edu%40appspot.gserviceaccount.com"
+}

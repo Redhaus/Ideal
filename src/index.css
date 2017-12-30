@@ -59,6 +59,10 @@ button:disabled {
   background-color: #eeeeee;
 }
 
+.field label.active {
+  background-color: inherit;
+}
+
 .quote {
   padding: 40px 5px 5px 5px;
   font-style: italic;
@@ -67,4 +71,47 @@ button:disabled {
 .quoteContainer {
 
   background-color: #eeeeee;
+}
+
+.top-padding {
+  padding: 15px 0px 0px 0px;
+}
+
+.readings .title{
+  text-align: center;
+}
+
+.ui.checkbox input:checked~.box:before, .ui.checkbox input:checked~label:before {
+  background: #eee !important;
+  /* border-color: none !important; */
+}
+
+
+/* 
+.ui.checkbox input:checked~.box:before, .ui.checkbox input:checked~label:before :active{
+  background: #eee !important;
+  border-color: none !important;
+}
+
+.ui.checkbox input:checked~.box:before, .ui.checkbox input:checked~label:before :hover{
+  background: #eee !important;
+  border-color: none !important;
+} */
+
+/* .pop-up {
+  padding: 15px;
+} */
+
+.pop-up li {
+  padding-bottom: 5px;
+}
+
+.pop-up ul {
+  padding: 0px 0px 0px 15px;
+}
+
+
+
+.icon-right{
+  float: right;
 }

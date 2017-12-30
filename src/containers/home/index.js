@@ -3,11 +3,12 @@ import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 // import { Button } from 'semantic-ui-react';
-import SubHeader from '../../components/subheader';
-import CourseOverviewPrimary from '../../components/courseOverviewPrimary';
-import CourseLexisReading from '../../components/courseLexisReading';
-import CourseQuestionsAssignments from '../../components/courseQuestionsAssignments';
-import CourseBaseSegue from '../../components/courseBaseSegue';
+import SubHeader from '../../components/header/subheader';
+import CourseOverviewPrimary from '../../components/overview/courseOverviewPrimary';
+import CourseLexisReading from '../../components/lexis/courseLexisReading';
+import CourseQuestionsAssignments from '../../components/questions/courseQuestionsAssignments';
+import CourseBaseSegue from '../../components/goals/courseBaseSegue';
+// import '../../playground/firebaseTest';
 
 import {
   increment,
@@ -19,6 +20,9 @@ import {
 const Home = props => (
  
   <div>
+
+
+
   <SubHeader/>
   <CourseOverviewPrimary/>
   <CourseLexisReading/>
