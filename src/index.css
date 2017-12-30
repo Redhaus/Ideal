@@ -34,6 +34,8 @@ button:disabled {
   padding: 2px 4px 2px 4px;
 }
 
+
+
 .base-goals:hover{
   background-color: #eeeeee;
 }
@@ -114,4 +116,18 @@ button:disabled {
 
 .icon-right{
   float: right;
+}
+
+
+.performance-list .ui.card {
+  box-shadow: none;
+}
+
+.performance-list .header {
+  text-align: center;
+}
+
+
+.summer-reading{
+  padding-bottom: 20px;
 }

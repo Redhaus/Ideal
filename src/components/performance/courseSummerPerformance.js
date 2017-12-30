@@ -1,9 +1,9 @@
 import React from 'react'
-import { Grid, Image, Popup } from 'semantic-ui-react'
-import BaseGoals from '../../components/baseGoals';
-import baseGoalsData from '../../fixtures/baseGoalsData';
-import { segueData, quoteData, baseData} from '../../fixtures/quoteSegue';
-import { popSize } from '../../utils/utils';
+import { Grid,  Popup, Card } from 'semantic-ui-react'
+import SummerReading from '../../components/performance/summerReading';
+import KeyQuestions from '../../components/performance/keyQuestions';
+import { popSize, style } from '../../utils/utils';
+import {performanceData, performanceRollover, summerData, keyQuestions, keyRollover, firstDay} from '../../fixtures/summerPerformanceData';
 
 
 const CourseSummerPerformance = () => {
@@ -39,27 +39,26 @@ return (
   <Grid >
     <Grid.Row>
       <Grid.Column width={5}>
-      {handlePopup('Base Goals', baseData)}
-      <BaseGoals goals={baseGoalsData} /> 
+      <div><h4>Summer Reading</h4></div>
+      <SummerReading books={summerData} /> 
+
+      <div>{ handlePopup('Key Questions', keyRollover) }</div>
+      <KeyQuestions questions={keyQuestions} /> 
       </Grid.Column>
 
-      <Grid.Column width={5}>
-      {handlePopup('Segue to Next Unit', segueData)}
-      <p className="top-padding"> {segueData.segue}</p>
-      </Grid.Column>
-
-      <Grid.Column width={6}>
-      <Image src='https://ichef.bbci.co.uk/images/ic/1200x675/p01jxvfv.jpg' fluid rounded />
    
-      <div  className="top-padding">
-      <p>"{quoteData.quote}"</p>
-      <p>– {quoteData.author}</p>
+
+      <Grid.Column width={11}>
+      <div>{ handlePopup('Performance', performanceRollover) }</div>
+      <Card.Group itemsPerRow={3} items={performanceData} className="performance-list"/>
 
 
-
-    
-
+      <div><p><strong>First Day: </strong> {firstDay}</p>
+      
       </div>
+     
+
+
       </Grid.Column>
      
     

@@ -8,6 +8,7 @@ import CourseOverviewPrimary from '../../components/overview/courseOverviewPrima
 import CourseLexisReading from '../../components/lexis/courseLexisReading';
 import CourseQuestionsAssignments from '../../components/questions/courseQuestionsAssignments';
 import CourseBaseSegue from '../../components/goals/courseBaseSegue';
+import CourseSummerPerformance from '../../components/performance/courseSummerPerformance';
 // import '../../playground/firebaseTest';
 
 import {
@@ -28,6 +29,7 @@ const Home = props => (
   <CourseLexisReading/>
   <CourseQuestionsAssignments/>
   <CourseBaseSegue/>
+  <CourseSummerPerformance />
 
   
   </div>

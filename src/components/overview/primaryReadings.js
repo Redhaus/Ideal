@@ -1,6 +1,6 @@
 import React from 'react'
-import { Grid, Checkbox, Popup } from 'semantic-ui-react'
-import { handleOnClick, style, popSize } from '../../utils/utils'
+import { Grid, Checkbox, Popup, Icon } from 'semantic-ui-react'
+import { handleOnClick, style, popSize, iconSize, iconColor } from '../../utils/utils'
 
 const PrimaryReadings = (props) => {
 
@@ -12,6 +12,13 @@ const PrimaryReadings = (props) => {
         <div className='primary-reading'>
           <h5>{item.author} | {item.date}</h5>
           <Checkbox label={item.title} cat='PRIMARY' onClick={handleOnClick} />
+          <a href={item.link} target="blank">
+          <Icon size={iconSize} 
+              color={iconColor} 
+              name="download" 
+              link 
+              className="icon-right"/> 
+          </a>
         </div>
       )
 

@@ -8,7 +8,7 @@
     
       // const refer to parent element of selection
       const activeTarget = e.target.parentNode.parentNode;
-
+console.log(lexisData)
 
       // compose selections made into object and push object into array
 
@@ -65,6 +65,7 @@
     borderRadius: 5,
     opacity: 0.9,
     padding: '2em',
+    width:'40em'
     
   }
 
@@ -72,3 +73,16 @@
   export const iconColor = "red"
   export const iconSize = "large"
 
+
+
+
+
+// ICONS
+// file text outline
+// plus square outline
+// plus
+// elipseys
+// Comment
+// comment outline
+// external
+// add circle

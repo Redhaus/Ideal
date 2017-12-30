@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Popup } from 'semantic-ui-react'
+import { Grid, Popup, Icon } from 'semantic-ui-react'
 import CourseOverview from '../../components/overview/courseOverview';
 import PrimaryReadings from '../../components/overview/primaryReadings';
 import readings from '../../fixtures/readingData';
@@ -14,7 +14,7 @@ const title = (
 
 const popup = (
     <div>
-    <h4>{primarydata.title}</h4>
+    <h4>{primarydata.title} </h4>
     <p>{primarydata.titleRollover}</p>
     </div>
 )
@@ -27,7 +27,7 @@ return (
         <CourseOverview title={title} popup={popup} />
       </Grid.Column>
       <Grid.Column width={11}>
-        <Popup trigger={<h4 className="title">PRIMARY READING</h4>} content={primarydata.primaryRollover}  position='bottom left' size={popSize} style={style} inverted/>
+        <Popup trigger={<h4 className="title">PRIMARY READING <Icon name='help circle outline'  /></h4>} content={primarydata.primaryRollover}  position='bottom left' size={popSize} style={style} inverted/>
         <PrimaryReadings readings={readings.unitOne.primary}/>
       </Grid.Column>
     </Grid.Row>

@@ -1,12 +1,17 @@
 const unitOneLexis = [{
-    pos: 'n.',
     word: 'Apollo',
     def: 'Olympian deity, god of music, poetry, medicine, etc., later identified with Helios, the sun god; the name is a Latin form of Greek Apollon, said to be perhaps related to an obsolete Greek verb meaning “to drive away” (evil, etc.).',
-    app: ['know that Apollo will function as the primary archetype of masculinity from which other symbolic and archetypal functions will be derived.', 'explore what possibille significations arise from Apollo and enumerate them.', 'understand how Apollonian archetypes compare to those of Dionysus.']
+    app: ['know that Apollo will function as the primary archetype of masculinity from which other symbolic and archetypal functions will be derived.', 'explore what possibille significations arise from Apollo and enumerate them.', 'understand how Apollonian archetypes compare to those of Dionysus.'],
+    pos: 'n.'
 },
 {
     word: 'abstract',
-    def: 'Meaning “withdrawn or separated from material objects or practical matters” is from mid-1500s. That of “difficult to understand, abstruse” is from ~ 1400. 1914 in reference to modern art while abstract expressionism is from the 1940s-1950s specifically in reference to the work of Jackson Pollock, though the term itself had been used in the 1920s of Wassily Kandinsky as well as certain Impressionistic painters such as Claude Monet.'
+    def: 'Meaning “withdrawn or separated from material objects or practical matters” is from mid-1500s. That of “difficult to understand, abstruse” is from ~ 1400. 1914 in reference to modern art while abstract expressionism is from the 1940s-1950s specifically in reference to the work of Jackson Pollock, though the term itself had been used in the 1920s of Wassily Kandinsky as well as certain Impressionistic painters such as Claude Monet.',
+    app: [ 'know that abstract is the opposite of concrete.', 
+        'considered the term “abstract” in relation to figurative and literal. ',
+        'explore whether these terms apply to other disciplines as well. ',
+        'consider the significance of abstract art for art itself and Modernism.'],
+    pos: 'adj.'
 },
 {
     word: 'alliteration',
