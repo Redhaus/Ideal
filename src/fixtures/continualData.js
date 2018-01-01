@@ -33,7 +33,7 @@ export const continualData = [{
 
 
 
-const continualRollover = {
+export const continualRollover = {
     rollover: 'The Continual Goals are those that need to be repeatedly covered throughout the course and cannot be contained in a single unit. As the goals are covered, teachers should check them off and attempt to engage with each by the end of the year.'
 }
 

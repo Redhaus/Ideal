@@ -1,36 +1,16 @@
 import React from 'react'
-import { Grid, Checkbox, Popup, Icon, Card } from 'semantic-ui-react'
-import { handleOnClick, style, iconSize, iconColor, popSize } from '../../utils/utils';
-import renderHTML from 'react-render-html';
+import { Grid, Popup } from 'semantic-ui-react'
+import { style, popSize } from '../../utils/utils';
 import Skills from './skills';
 
 const FinalGoals = (props) => {
 
-
   const handleList = (list) => {
 
-
     // const skillList;
-
     return list.map((item, key) => {
 
-      // const skills = item.skills.map( (skill, key) => {
-
-        
-      //   return (
-      //     <p key={key}>{skill}</p>
-      //   )
-
-      // })
-
-
-
-
-  
-
       const title = (
-
-
         <Grid.Column>
           <div className="goals">
             <h5>{item.goal}</h5>
@@ -46,21 +26,13 @@ const FinalGoals = (props) => {
       )
 
       const template = (
-      <Card fluid>
-      
-        <Grid.Column key={key} >
-        <Popup  trigger={title} content={popup} size={popSize} style={style} inverted />
-        <Skills skills={item.skills}/>
+        <Grid.Column key={key} className="skills" >
+          <Popup trigger={title} content={popup} size={popSize} style={style} inverted />
+          <Skills skills={item.skills} />
         </Grid.Column >
-        </Card>
       )
 
-      
-        return template;
-    
-      
-
-
+      return template;
 
     })
 
@@ -68,20 +40,9 @@ const FinalGoals = (props) => {
 
 
   return (
-
-
-
-    <div className="top-padding">
-    <Grid>
-    <Grid.Row columns={3}>
-    {handleList(props.list)}
-    {/* </Card> */}
-    {/* </Card.Group> */}
-    
-    </Grid.Row>
-    </Grid>
+    <div className="top-padding masonry ">
+      {handleList(props.list)}
     </div>
-
   )
 }
 

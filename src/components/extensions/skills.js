@@ -7,20 +7,13 @@ const Skills = (props) => {
     const handleSkills = (skills) => {
 
         return skills.map((skill, key) => {
-            console.log(skill)
-
 
             const skillTitle = (
-
-
-        <Grid.Column>
-         <div className="skill-goals">
-         <Checkbox label={skill} onClick={handleOnClick} />
-     </div>
-      </Grid.Column>
-               
-                   
-                
+                <Grid.Column>
+                    <div className="skill-goals">
+                        <Checkbox label={skill} onClick={handleOnClick} />
+                    </div>
+                </Grid.Column>
             )
 
             const skillPopup = (
@@ -38,16 +31,12 @@ const Skills = (props) => {
 
         })
 
-    
-
     }
 
     return (
         <Grid.Column >
-       { handleSkills(props.skills) }
-       </Grid.Column>
-       
-
+            {handleSkills(props.skills)}
+        </Grid.Column>
     )
 };
 

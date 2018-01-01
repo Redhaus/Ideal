@@ -10,32 +10,20 @@ const Extensions = (props) => {
 
     return list.map((item, key) => {
 
-        const ext = renderHTML(item.ext)
-
-        // const str = item.ext;
-        // const callout = item.callout;
-
-
-        // console.log(str.indexOf(callout))
-
-  
+      const ext = renderHTML(item.ext)
 
       const title = (
-
-
-       
         <Grid.Column key={key}>
           <div className="extensions">
-            <Checkbox label={ext} desc={item.rollover} onClick={handleOnClick} /> 
-                {item.link ? <a href={item.link} target='blank' ><Icon size={iconSize} color={iconColor} name='book' link  className="icon-right" /></a> : ''}
+            <Checkbox label={ext} desc={item.rollover} onClick={handleOnClick} />
+            {item.link ? <a href={item.link} target='blank' ><Icon size={iconSize} color={iconColor} name='book' link className="icon-right" /></a> : ''}
           </div>
         </Grid.Column>
-        
       )
-
 
       const popup = (
         <div>
+          {item.callout ? <h4>{item.callout}</h4> : '' }
           <p>{item.rollover}</p>
         </div>
       )
@@ -44,14 +32,11 @@ const Extensions = (props) => {
         <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
       )
 
-      if(item.rollover){
-      return template;
-    }else{
+      if (item.rollover) {
+        return template;
+      } else {
         return title;
-    }
-      
-
-
+      }
 
     })
 
@@ -59,18 +44,13 @@ const Extensions = (props) => {
 
 
   return (
-
-
-
     <div className="top-padding">
-    <Grid>
-    <Grid.Row columns={1}>
-    {handleList(props.list)}
-    </Grid.Row>
-    </Grid>
-
+      <Grid>
+        <Grid.Row columns={1}>
+          {handleList(props.list)}
+        </Grid.Row>
+      </Grid>
     </div>
-
   )
 }
 
