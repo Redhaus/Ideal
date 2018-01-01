@@ -9,11 +9,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #7e7d7b;
+  color: #373737;
 }
 
 .ui.checkbox label, .ui.checkbox+label {
-  color: #7e7d7b;
+  color: #373737;
 }
 
 .ui.container {
@@ -204,10 +204,22 @@ button:disabled {
 
 .caps {
   text-align: center;
-  background-color: #f2f2f0;
+  border-top: 1px solid #f2f2f0;
+  border-bottom: 1px solid #f2f2f0;
   padding: 10px 0px;
   text-transform: uppercase;
 }
+
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-top: 1px solid #f2f2f0;
+  border-bottom: 1px solid #f2f2f0;
+}
+
+/* .caps:hover {
+
+  background-color: #f2f2f0;
+ 
+} */
 
 .lexis-cols {
   padding-top: 0px !important;
@@ -240,12 +252,9 @@ button:disabled {
 
 .goals h5 {
   padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f0;
+  margin-bottom: 10px;
 }
-/* 
-
-.clear{
-  clear: both;
-} */
 
 .nav{
   background-color: #373737;
@@ -270,4 +279,8 @@ button:disabled {
  
   padding-top: 20px
 
+}
+
+.summer-reading h4 {
+  color: #373737;
 }

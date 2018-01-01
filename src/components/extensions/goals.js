@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Popup } from 'semantic-ui-react'
+import { Grid, Popup, Icon } from 'semantic-ui-react'
 import { style, popSize } from '../../utils/utils';
 import Skills from './skills';
 
@@ -13,7 +13,7 @@ const FinalGoals = (props) => {
       const title = (
         <Grid.Column>
           <div className="goals">
-            <h5>{item.goal}</h5>
+            <h5>{item.goal} <Icon name='help circle outline' size="tiny"/> </h5>
           </div>
         </Grid.Column>
       )
