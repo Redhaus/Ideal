@@ -10,6 +10,10 @@ import CourseQuestionsAssignments from '../../components/questions/courseQuestio
 import CourseBaseSegue from '../../components/goals/courseBaseSegue';
 import CourseSummerPerformance from '../../components/performance/courseSummerPerformance';
 import ExtensionsGoals from '../../components/extensions/extensionsGoals';
+import {Image} from 'semantic-ui-react';
+import imgHeader from '../../images/survey1header.png';
+import Footer from '../../components/footer/footer';
+
 // import '../../playground/firebaseTest';
 
 import {
@@ -21,17 +25,36 @@ import {
 
 const Home = props => (
  
-  <div>
+  <div >
 
 
-
+  <div className="ui nav">
+  <div className="ui container">
   <SubHeader/>
+  </div>
+  </div>
+
+ 
+  
+
+  <div className="ui container">
+  <Image src={imgHeader} fluid />
+  
+  <div className="background">
   <CourseOverviewPrimary/>
   <CourseLexisReading/>
   <CourseQuestionsAssignments/>
   <CourseBaseSegue/>
   <CourseSummerPerformance />
   <ExtensionsGoals />
+  </div>
+
+  <Footer />
+
+  </div>
+  
+
+
 
   
   </div>

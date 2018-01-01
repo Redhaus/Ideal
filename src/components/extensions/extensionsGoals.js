@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Icon, Popup, Divider } from 'semantic-ui-react'
+import { Grid, Icon, Popup } from 'semantic-ui-react'
 import Extensions from './extensions';
 import { style } from '../../utils/utils';
 import { extensions, extensionsRollover } from '../../fixtures/extensionsData';
