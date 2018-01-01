@@ -89,15 +89,12 @@ const CourseFurtherReadings = (props) => {
       <Grid.Row columns={1}>
         <Grid.Column>
           <div><h4 className="caps">Further Reading</h4></div>
-          <Divider />
-
         </Grid.Column>
 
-        <Grid.Column>
-          <h3>Poetry</h3>
-        </Grid.Column>
+     
       </Grid.Row>
-
+      <div><h3>Poetry</h3></div>
+      
       <Grid.Row columns={3}>
         {handleReadings(props.readings.poems)}
       </Grid.Row>
@@ -105,10 +102,9 @@ const CourseFurtherReadings = (props) => {
       <Grid.Row columns={1}>
         <Grid.Column>
           <Divider />
-
-          <h3>Essays</h3>
         </Grid.Column>
       </Grid.Row>
+      <div> <h3>Essays</h3></div>
 
       <Grid.Row columns={3}>
         {handleReadings(props.readings.essays)}

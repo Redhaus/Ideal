@@ -7,7 +7,8 @@ const CourseQuestionsAssignments = () => (
       <Grid.Column width={5}>
 
         <Form>
-            <Form.Field label='Key Questions' control='textarea'  />
+        <h4 className="caps">Key Questions</h4>
+            <Form.Field control='textarea'  />
         </Form>
 
 
@@ -15,7 +16,9 @@ const CourseQuestionsAssignments = () => (
       <Grid.Column width={11}>
 
         <Form>
-            <Form.Field label='Assignments' control='textarea'  />
+        <h4 className="caps">Assignments</h4>
+          
+            <Form.Field control='textarea'  />
         </Form>
 
       </Grid.Column>

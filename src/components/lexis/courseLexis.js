@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Popup, Divider, Checkbox } from 'semantic-ui-react'
+import { Grid, Popup, Checkbox } from 'semantic-ui-react'
 
 import { handleOnClick, style, popSize } from '../../utils/utils';
 
@@ -71,15 +71,14 @@ const CourseLexis = (props) => {
 
 
   return (
-    <Grid>
+    <Grid className="lexis">
       <Grid.Row>
         <Grid.Column>
           <div><h4 className="caps">Lexis</h4></div>
-          <Divider />
         </Grid.Column>
       </Grid.Row>
 
-      <Grid.Row columns={2}>
+      <Grid.Row columns={2} className="lexis-cols">
         {renderList(list)}
       </Grid.Row>
     </Grid>

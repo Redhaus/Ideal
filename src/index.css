@@ -41,6 +41,41 @@ button:disabled {
 }
 
 
+.key-questions{
+  padding: 2px 4px 2px 4px;
+}
+
+
+
+.key-questions:hover{
+  background-color: #eeeeee;
+}
+
+
+.extensions{
+  padding: 2px 4px 2px 4px;
+}
+
+
+
+.extensions:hover{
+  background-color: #eeeeee;
+}
+
+.skill-goals{
+  padding: 2px 4px 2px 4px;
+}
+
+
+
+.skill-goals:hover{
+  background-color: #eeeeee;
+}
+
+
+
+
+
 .lexis-guide{
   padding: 2px 4px 2px 4px;
 }
@@ -129,7 +164,14 @@ button:disabled {
 
 
 .summer-reading{
-  padding-bottom: 20px;
+ 
+    padding: 10px 4px 10px 4px;
+    margin-bottom: 10px;
+
+}
+
+.summer-reading:hover{
+  background-color: #eeeeee;
 }
 
 .performance {
@@ -137,9 +179,15 @@ button:disabled {
 }
 
 .caps {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0px;
   text-transform: uppercase;
-  /* border: 1px solid #eee; */
-  /* padding: 10px; */
+}
+
+.lexis-cols {
+  padding-top: 0px !important;
+
 }
 
 

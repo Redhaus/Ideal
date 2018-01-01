@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid,  Popup, Divider } from 'semantic-ui-react'
+import { Grid,  Popup, Divider, Icon } from 'semantic-ui-react'
 import SummerReading from './summerReading';
 import KeyQuestions from './keyQuestions';
 import Performance from './performance';
@@ -14,7 +14,7 @@ const CourseSummerPerformance = () => {
     
           const title = (
             <div>
-            <h4 className="caps">{header}</h4>
+            <h4 className="caps">{header} <Icon name='help circle outline' /></h4>
             </div>
           )
     
@@ -41,12 +41,10 @@ return (
     <Grid.Row>
       <Grid.Column width={5}>
       <div><h4 className="caps">Summer Reading</h4></div>
-      <Divider />
       
       <SummerReading books={summerData} /> 
 
       <div>{ handlePopup('Key Questions', keyRollover) }</div>
-      <Divider />
       
       <KeyQuestions questions={keyQuestions} /> 
       </Grid.Column>
@@ -55,7 +53,6 @@ return (
 
       <Grid.Column width={11}>
       <div>{ handlePopup('Performance', performanceRollover) }</div>
-      <Divider />
       <Performance content={performanceData}/>
       <Divider />
       

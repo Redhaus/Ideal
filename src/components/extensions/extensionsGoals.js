@@ -39,14 +39,12 @@ const ExtensionsGoals = () => {
       <Grid.Row>
         <Grid.Column width={5}>
           {handlePopup('Extensions', extensionsRollover)}
-          <Divider />
           <Extensions list={extensions} />
         </Grid.Column>
 
         <Grid.Column width={11} >
 
           {handlePopup('Continual Goals', continualRollover)}
-          <Divider />
           <Goals list={continualData} />
 
         </Grid.Column>

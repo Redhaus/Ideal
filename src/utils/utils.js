@@ -3,12 +3,13 @@
 
   export const readingData = [];
   export const lexisData = [];
+  export const alldata = [];
 
   export const handleOnClick = (e, data) => {
     
       // const refer to parent element of selection
       const activeTarget = e.target.parentNode.parentNode;
-console.log(lexisData)
+// console.log(lexisData)
 
       // compose selections made into object and push object into array
 
@@ -26,13 +27,17 @@ console.log(lexisData)
 
         }
 
+        alldata.push(info);
+
+
   
         
-    
+        console.log(alldata);
+        
       // selectedData.push(info);
       // console.log(selectedData);
 
-
+        
       // add an remove classes if item clicked
       if(data.checked){
         return activeTarget.className += " active";

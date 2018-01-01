@@ -7,7 +7,7 @@ import {style, popSize} from '../../utils/utils';
 const SubHeader = () => {
 
   const title = (
-    <p><strong>  Prior Knowledge: </strong>{primarydata.knowledge}  <Icon name='help circle outline'  /></p>
+    <p> <Icon name='arrow left'  /><strong>  Prior Knowledge: </strong>{primarydata.knowledge} </p>
   )
   
   const popup = (
