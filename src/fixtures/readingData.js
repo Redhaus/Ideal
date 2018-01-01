@@ -5,7 +5,7 @@ const readings = {
                 beginner: [{
                     author: 'Homer',
                     date: '850BCE-800BCE',
-                    title: 'The Odyssey (Ian Johnston)',
+                    title: 'The Odyssey (Johnston)',
                     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'
                 }],
                 intermediate: [{
