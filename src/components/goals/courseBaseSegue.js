@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Popup } from 'semantic-ui-react'
+import { Grid, Popup, Icon } from 'semantic-ui-react'
 import BaseGoals from './baseGoals';
 import baseGoalsData from '../../fixtures/baseGoalsData';
 import { segueData, quoteData, baseData} from '../../fixtures/quoteSegue';
@@ -15,7 +15,7 @@ const CourseBaseSegue = () => {
     
           const title = (
             <div>
-            <h4>{header}</h4>
+            <h4 className="caps">{header} <Icon name='help circle outline'  /></h4>
             </div>
           )
     

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Grid,  Popup, Card } from 'semantic-ui-react'
-import SummerReading from '../../components/performance/summerReading';
-import KeyQuestions from '../../components/performance/keyQuestions';
+import { Grid,  Popup, Divider } from 'semantic-ui-react'
+import SummerReading from './summerReading';
+import KeyQuestions from './keyQuestions';
+import Performance from './performance';
 import { popSize, style } from '../../utils/utils';
 import {performanceData, performanceRollover, summerData, keyQuestions, keyRollover, firstDay} from '../../fixtures/summerPerformanceData';
 
@@ -13,7 +14,7 @@ const CourseSummerPerformance = () => {
     
           const title = (
             <div>
-            <h4>{header}</h4>
+            <h4 className="caps">{header}</h4>
             </div>
           )
     
@@ -39,10 +40,14 @@ return (
   <Grid >
     <Grid.Row>
       <Grid.Column width={5}>
-      <div><h4>Summer Reading</h4></div>
+      <div><h4 className="caps">Summer Reading</h4></div>
+      <Divider />
+      
       <SummerReading books={summerData} /> 
 
       <div>{ handlePopup('Key Questions', keyRollover) }</div>
+      <Divider />
+      
       <KeyQuestions questions={keyQuestions} /> 
       </Grid.Column>
 
@@ -50,10 +55,12 @@ return (
 
       <Grid.Column width={11}>
       <div>{ handlePopup('Performance', performanceRollover) }</div>
-      <Card.Group itemsPerRow={3} items={performanceData} className="performance-list"/>
-
-
+      <Divider />
+      <Performance content={performanceData}/>
+      <Divider />
+      
       <div><p><strong>First Day: </strong> {firstDay}</p>
+      <Divider />
       
       </div>
      

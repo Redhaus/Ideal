@@ -15,7 +15,7 @@ const PrimaryReadings = (props) => {
           <a href={item.link} target="blank">
           <Icon size={iconSize} 
               color={iconColor} 
-              name="download" 
+              name="book" 
               link 
               className="icon-right"/> 
           </a>

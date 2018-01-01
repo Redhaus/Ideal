@@ -74,7 +74,7 @@ const CourseLexis = (props) => {
     <Grid>
       <Grid.Row>
         <Grid.Column>
-          <div><h4>Lexis</h4></div>
+          <div><h4 className="caps">Lexis</h4></div>
           <Divider />
         </Grid.Column>
       </Grid.Row>

@@ -9,6 +9,7 @@ import CourseLexisReading from '../../components/lexis/courseLexisReading';
 import CourseQuestionsAssignments from '../../components/questions/courseQuestionsAssignments';
 import CourseBaseSegue from '../../components/goals/courseBaseSegue';
 import CourseSummerPerformance from '../../components/performance/courseSummerPerformance';
+import ExtensionsGoals from '../../components/extensions/extensionsGoals';
 // import '../../playground/firebaseTest';
 
 import {
@@ -30,6 +31,7 @@ const Home = props => (
   <CourseQuestionsAssignments/>
   <CourseBaseSegue/>
   <CourseSummerPerformance />
+  <ExtensionsGoals />
 
   
   </div>

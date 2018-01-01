@@ -88,7 +88,7 @@ const CourseFurtherReadings = (props) => {
     <Grid>
       <Grid.Row columns={1}>
         <Grid.Column>
-          <div><h4>Further Reading</h4></div>
+          <div><h4 className="caps">Further Reading</h4></div>
           <Divider />
 
         </Grid.Column>
