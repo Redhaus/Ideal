@@ -12,6 +12,11 @@ body {
   color: #373737;
 }
 
+.full-body {
+  background-color: #f2f2f0;
+  
+}
+
 .ui.checkbox label, .ui.checkbox+label {
   color: #373737;
 }

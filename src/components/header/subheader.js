@@ -30,14 +30,15 @@ return (
         <Grid.Column className="top-padding" >
         <Popup trigger={title} content={popup} size={popSize} style={style} inverted/>
         </Grid.Column>
-        
+
         <Grid.Column >
         <Image  centered src={logo} size='tiny' />
         </Grid.Column>
 
         <Grid.Column className="top-padding"  textAlign='right'>
         <Dropdown  placeholder="Event 1" options={eventOptions} />
-        
+       
+
         </Grid.Column>
       </Grid.Row>
     </Grid>

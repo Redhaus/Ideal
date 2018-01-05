@@ -80,7 +80,10 @@
 
 
 
-
+export const toggleVisibility = () => this.setState(() => ({
+  visible: !this.state.visible
+})
+);
 
 // ICONS
 // file text outline

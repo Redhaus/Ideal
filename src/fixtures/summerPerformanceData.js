@@ -2,7 +2,7 @@ export const summerData = [{
             level: 'Advanced',
             title: 'The Odyssey',
             author: 'Homer 850BCE-800BCE',
-            rollover: 'The Odyssey is literatures grandest evocation of everyman’s journey through life. Odysseus’ reliance on his own wit and willingness for survival in his encounters with divine and natural forces during his ten year voyage home to Ithaca after the Trojan War is at once a timeless human story and an individual test of moral endurance.',
+            rollover: "The Odyssey is literatures grandest evocation of everyman’s journey through life. Odysseus’ reliance on his own wit and willingness for survival in his encounters with divine and natural forces during his ten year voyage home to Ithaca after the Trojan War is at once a timeless human story and an individual test of moral endurance.",
             link: 'http://amzn.to/2o1SJhv'
 
         },
@@ -10,8 +10,8 @@ export const summerData = [{
             level: 'Beginner & Intermediate',
             title: 'Mythology: Timeless Tales of Gods and Heroes',
             author: 'Edith Hamilton',
-            rollover: 'The Odyssey is literatures grandest evocation of everyman’s journey through life. Odysseus’ reliance on his own wit and willingness for survival in his encounters with divine and natural forces during his ten year voyage home to Ithaca after the Trojan War is at once a timeless human story and an individual test of moral endurance.',
-            link: 'http://amzn.to/2o1SJhv'
+            rollover: "Edith Hamilton's mythology succeeds like no other book in bringing to life for the modern reader the Greek, Roman and Norse myths that are the keystone of Western culture-the stories of gods and heroes that have inspired human creativity from antiquity to the present.",
+            link: 'https://www.amazon.com/Mythology-Timeless-Tales-Gods-Heroes/dp/0446574759'
             
         }]
 

@@ -8,7 +8,7 @@ export const segueData = {
 
 export const quoteData = {
     quote: 'I therefore claim to show, not how men think in myths, but how myths operate in men’s minds without their being aware of the fact.',
-    author: 'Levi Strauss'
+    author: 'Claude Levi-Strauss'
 }
 
 export const baseData = {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Grid, Checkbox, Popup, Divider, Icon } from 'semantic-ui-react'
-import { handleOnClick, style, iconSize, iconColor, popSize } from '../../utils/utils';
+import { Grid, Checkbox,  Divider, Icon } from 'semantic-ui-react'
+import { handleOnClick, iconSize, iconColor } from '../../utils/utils';
 
 const CourseFurtherReadings = (props) => {
 
@@ -15,7 +15,7 @@ const CourseFurtherReadings = (props) => {
     return readings.map((item, key) => {
 
       const title = (
-        <Grid.Column >
+        <Grid.Column key={key}>
           <div className="further-reading">
             <h5>{item.author} | {item.date}</h5>
             <Checkbox label={item.title}
@@ -35,7 +35,7 @@ const CourseFurtherReadings = (props) => {
       )
 
       const essaytitle = (
-        <Grid.Column>
+        <Grid.Column key={key}>
           <div className="further-reading">
             <h5>{item.source}  
                 <a href={item.link} target="blank">
@@ -57,26 +57,26 @@ const CourseFurtherReadings = (props) => {
         </Grid.Column>
       )
 
-      const popup = (
-        <div>
-          <h4>{item.title}</h4>
-          <p>{item.description}</p>
-        </div>
-      )
+      // const popup = (
+      //   <div>
+      //     <h4>{item.title}</h4>
+      //     <p>{item.description}</p>
+      //   </div>
+      // )
 
-      const poemTemplate = (
-        <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
-      )
+      // const poemTemplate = (
+      //   <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
+      // )
 
-      const essayTemplate = (
-        <Popup key={key} trigger={essaytitle} content={popup} size={popSize} style={style} inverted />
-      )
+      // const essayTemplate = (
+      //   <Popup key={key} trigger={essaytitle} content={popup} size={popSize} style={style} inverted />
+      // )
 
 
       if (readings[key].source) {
-        return essayTemplate;
+        return essaytitle;
       } else {
-        return poemTemplate;
+        return title;
       }
 
     })
