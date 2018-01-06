@@ -13,6 +13,7 @@ import ExtensionsGoals from '../../components/extensions/extensionsGoals';
 import { Image, Button, Sidebar, Menu, Icon } from 'semantic-ui-react';
 import imgHeader from '../../images/survey1header.png';
 import Footer from '../../components/footer/footer';
+import LexisResults from '../../components/results/lexisResults';
 
 import { saveSelection } from '../../actions/action' //maybe move
 
@@ -93,6 +94,12 @@ class Home extends Component {
 
                   <Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
                   
+                  <div>
+                    <h4>LEXIS RESULTS</h4>
+                    <LexisResults />
+
+
+                  </div>
 
                   <Footer />
                 </div>

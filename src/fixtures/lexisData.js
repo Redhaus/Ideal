@@ -1,5 +1,6 @@
 const unitOneLexis = [
 {
+    id: '234wrasf',
     word: 'Apollo',
     pos: 'n.',
     variation: ['Apollonian (adj.)'],
@@ -20,6 +21,7 @@ const unitOneLexis = [
 
 
 {
+    id: '234wraertf',
     word: 'abstract',
     pos: 'adj.',
     variation: ['abstract (v.)', 'abstraction (n.)'],
@@ -44,6 +46,7 @@ const unitOneLexis = [
 },
 {
     word: 'alliteration',
+    id: '234wwwf',    
     pos: 'n.',
     variation: ['alliterate (v.)', 'alliterative (adj.)', 'alliteratively (adv.)'],
     etymology: "1650s, “a beginning with the same letter,” from Modern Latin alliterationem, noun of action from alliterare “to begin with the same letter,” from Latin ad- “to”  + littera “letter, script.” Formed on model of obliteration, etc.",
@@ -67,6 +70,7 @@ const unitOneLexis = [
     ]
 },
 {
+    id: '2sdwrasf',    
     word: 'allusion',
     pos: 'n.',
     variation: ['allude (v.)'],

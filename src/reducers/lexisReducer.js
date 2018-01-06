@@ -1,51 +1,47 @@
-const select = false;
-const initialState = [
-    {
-    id: 'adfg34q',
-    word: 'Apollo',
-    def: 'Greek God',
-    selected: select
-    },
-    {
-    id: 'lkuh47',    
-    word: 'abstract',
-    def: 'something without form',
-    selected: select
-    },
-    {
-    id: 'rrewqq',    
-    word: 'cows',
-    def: 'something for milk',
-    selected: select
-    }
-]
+import lexisData from '../fixtures/lexisData';
+// const select = false;
+
+// const initialState = [
+//     {
+//     id: 'adfg34q',
+//     word: 'Apollo',
+//     def: 'Greek God',
+//     selected: select
+//     },
+//     {
+//     id: 'lkuh47',    
+//     word: 'abstract',
+//     def: 'something without form',
+//     selected: select
+//     },
+//     {
+//     id: 'rrewqq',    
+//     word: 'cows',
+//     def: 'something for milk',
+//     selected: select
+//     }
+// ]
   
-  export default (state = initialState, action) => {
+  export default (state = lexisData, action) => {
     //   console.log(action.payload);
     switch (action.type) {
       case 'LEXIS':
 
-          const id = action.payload.idx;
-        
-          function match(element) {
-            return element.id === id;
-          }
+      // console.log(action.payload)
 
-          const bingo = state.find(match)
-          bingo.selected = !bingo.selected;
-          // console.log(bingo)
-          // console.log(bingo);
+          // this works
+          // const idx = action.payload.idx;
+        
+          // function match(element) {
+          //   return element.id === idx;
+          // }
 
-          return [...state]
+          // const bingo = state.find(match)
+          // bingo.selected = !bingo.selected;
+     
+          // return [...state]
+          return state
         
-        // [...state, bingo.selected = !bingo.selected ]
-        
-        
-        // {
-        //   ...state bingo.selected
-        //   }
-          
-        // }
 
 
       default:
