@@ -1,24 +1,70 @@
 import React from 'react'
 import { Grid, Popup, Checkbox } from 'semantic-ui-react'
 
-import { handleOnClick, style, popSize } from '../../utils/utils';
+import {connect} from 'react-redux';
+import { saveSelection } from '../../actions/action';
+import { bindActionCreators } from 'redux'
 
-const CourseLexis = (props) => {
 
-  const list = props.words;
-  // console.log('Lexis: ', lexisData);
+import { style, popSize } from '../../utils/utils';
 
-  // const style = {
-  //   borderRadius: 5,
-  //   opacity: 0.9,
-  //   padding: '2em',
+class CourseLexis extends React.Component {
+
+
+
+  // constructor(props){
+  //   super(props)
+   
     
   // }
   
 
 
+  handleOnClick = (e, data) => {
+    
+      // console.log(data.id);
+      // console.log(e.target);
+      // console.log(this.props);
+      // console.log('clicked')
+      const activeTarget = e.target.parentNode.parentNode;
+      // const info = {
+      //     title: data.label
+      //   }
 
-  const applicationList = (app) => {
+        
+      this.props.saveSelection(data); 
+      //maybe throwing error due to async process isn;t complete when lexis is rerederend by render list
+      
+        
+      // add an remove classes if item clicked
+      if(data.checked){
+        return activeTarget.className += " active";
+      }else{
+        return activeTarget.classList.remove("active");
+      }
+
+      
+  }
+
+
+
+
+
+
+
+
+
+
+
+  // testlist = (list) => {
+  //   list.map((item, key) => {
+  //        return console.log(item);
+  //   })
+  // }
+
+
+
+ applicationList = (app) => {
 
     return app.map( (item, key) => {
 
@@ -31,20 +77,22 @@ const CourseLexis = (props) => {
 
   }
 
-  const renderList = (words) => {
+ 
 
-    return words.map((item, key) => {
+  renderList = (lexis) => {
+    console.log('renderListCalled')
+    return lexis.map((item, key) => {
+      // console.log(item, key)
 
       // item template
       const title = (
         <Grid.Column>
           <div className="lexis-guide">
-            <Checkbox label={item.word} desc={item.def} cat='LEXIS' onClick={handleOnClick}  />
+            <Checkbox label={item.word} idx={item.id} onClick={this.handleOnClick}  />
           </div>
         </Grid.Column>
       )
 
-      // <Checkbox  label={item.word} id="test6" desc={item.def} cat='LEXIS' onClick={handleOnClick} />
 
     
       const pos = (
@@ -56,7 +104,7 @@ const CourseLexis = (props) => {
         <div className="pop-up">
           <h4>{item.word} { item.pos ? pos : '' } </h4>
           <p>{item.def}</p>
-          { item.app ? <div><h5>Application</h5><ul>{applicationList(item.app)}</ul></div> : '' }
+          { item.app ? <div><h5>Application</h5><ul>{this.applicationList(item.app)}</ul></div> : '' }
         </div>
       )
 
@@ -69,7 +117,7 @@ const CourseLexis = (props) => {
     });  // close your map
   };  // close renderList
 
-
+render(){
   return (
     <Grid className="lexis">
       <Grid.Row>
@@ -79,12 +127,42 @@ const CourseLexis = (props) => {
       </Grid.Row>
 
       <Grid.Row columns={2} className="lexis-cols">
-        {renderList(list)}
+        {this.renderList(this.props.lexis)}
+
+        {/* {this.testlist(this.props.lexis)}
+        {this.testlist(this.props.words)} */}
+        
+    {/* {console.log(this.props.words)} */}
+    {/* {console.log(this.props.lexis)} */}
+    
       </Grid.Row>
     </Grid>
   );
 }
+}
 
 
-export default CourseLexis;
+
+const mapStateToProps = state => {
+
+  return ({
+
+    lexis: state.lexis
+  
+     
+  
+  })
+}
+  
+  const mapDispatchToProps = (dispatch) => ({
+    
+        saveSelection: bindActionCreators(saveSelection, dispatch)
+    
+  })
+
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(CourseLexis)
+  
 

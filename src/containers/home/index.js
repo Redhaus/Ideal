@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { push } from 'react-router-redux'
+// import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 // import { Button } from 'semantic-ui-react';
@@ -14,12 +14,7 @@ import { Image, Button, Sidebar, Menu, Icon } from 'semantic-ui-react';
 import imgHeader from '../../images/survey1header.png';
 import Footer from '../../components/footer/footer';
 
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from '../../modules/counter'
+import { saveSelection } from '../../actions/action' //maybe move
 
 class Home extends Component {
 
@@ -90,7 +85,7 @@ class Home extends Component {
 
                 <div className="background">
                   <CourseOverviewPrimary />
-                  <CourseLexisReading />
+                  <CourseLexisReading saveSelection={this.props.saveSelection}/>
                   <CourseQuestionsAssignments />
                   <CourseBaseSegue />
                   <CourseSummerPerformance />
@@ -118,18 +113,39 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-          count: state.counter.count,
-  isIncrementing: state.counter.isIncrementing,
-  isDecrementing: state.counter.isDecrementing
+
+  
+    word: state.lexis.word,
+    def: state.lexis.def, 
+    selected: state.lexis.selected
+  
+
+
+  //         count: state.counter.count,
+  // isIncrementing: state.counter.isIncrementing,
+  // isDecrementing: state.counter.isDecrementing
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-          increment,
-        incrementAsync,
-  decrement,
-  decrementAsync,
-  changePage: () => push('/about-us')
-}, dispatch)
+// const mapDispatchToProps = function (dispatch) {
+//   return bindActionCreators({
+//     saveSelection: actionCreators.saveSelection,
+//   }, dispatch)
+// }
+
+const mapDispatchToProps = (dispatch) => ({
+  
+      saveSelection: bindActionCreators(saveSelection, dispatch)
+  
+})
+
+// const mapDispatchToProps = dispatch => bindActionCreators({
+
+//   //         increment,
+//   //       incrementAsync,
+//   // decrement,
+//   // decrementAsync,
+//   // changePage: () => push('/about-us')
+// }, dispatch)
 
 export default connect(
   mapStateToProps,

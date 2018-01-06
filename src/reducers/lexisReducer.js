@@ -1,0 +1,75 @@
+const select = false;
+const initialState = [
+    {
+    id: 'adfg34q',
+    word: 'Apollo',
+    def: 'Greek God',
+    selected: select
+    },
+    {
+    id: 'lkuh47',    
+    word: 'abstract',
+    def: 'something without form',
+    selected: select
+    },
+    {
+    id: 'rrewqq',    
+    word: 'cows',
+    def: 'something for milk',
+    selected: select
+    }
+]
+  
+  export default (state = initialState, action) => {
+    //   console.log(action.payload);
+    switch (action.type) {
+      case 'LEXIS':
+
+          const id = action.payload.idx;
+        
+          function match(element) {
+            return element.id === id;
+          }
+
+          const bingo = state.find(match)
+          bingo.selected = !bingo.selected;
+          // console.log(bingo)
+          // console.log(bingo);
+
+          return [...state]
+        
+        // [...state, bingo.selected = !bingo.selected ]
+        
+        
+        // {
+        //   ...state bingo.selected
+        //   }
+          
+        // }
+
+
+      default:
+      return state
+  }
+}
+  
+//       case INCREMENT:
+//         return {
+//           ...state,
+//           count: state.count + 1,
+//           isIncrementing: !state.isIncrementing
+//         }
+  
+//       case DECREMENT_REQUESTED:
+//         return {
+//           ...state,
+//           isDecrementing: true
+//         }
+  
+//       case DECREMENT:
+//         return {
+//           ...state,
+//           count: state.count - 1,
+//           isDecrementing: !state.isDecrementing
+//         }
+  
