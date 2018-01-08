@@ -3,11 +3,13 @@
 
 import lexis from './lexisReducer';
 import lexisSelect from './lexisSelectReducer';
+import lexisFilterReducer from './lexisFilterReducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
     lexis: lexis,
-    lexisSelect: lexisSelect
+    lexisSelect: lexisSelect,
+    lexisFilterReducer: lexisFilterReducer
 })
 
 export default rootReducer;

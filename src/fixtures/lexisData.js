@@ -1,5 +1,6 @@
 const unitOneLexis = [
 {
+    valueNames: [ 'name', 'city' ],
     id: '234wrasf',
     word: 'Apollo',
     pos: 'n.',
@@ -21,6 +22,7 @@ const unitOneLexis = [
 
 
 {
+    valueNames: [ 'city', 'pie' ],
     id: '234wraertf',
     word: 'abstract',
     pos: 'adj.',
@@ -46,6 +48,7 @@ const unitOneLexis = [
 },
 {
     word: 'alliteration',
+    valueNames: [ 'city', 'pie' ],    
     id: '234wwwf',    
     pos: 'n.',
     variation: ['alliterate (v.)', 'alliterative (adj.)', 'alliteratively (adv.)'],

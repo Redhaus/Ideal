@@ -1,6 +1,7 @@
 import Store from '../store';
+// import _ from 'lodash';
   
-  
+// this collects all lexis select results
   export default (state = [], action) => {
     switch (action.type) {
       case 'LEXIS':
@@ -10,21 +11,15 @@ import Store from '../store';
         const currentLexis = appStore.lexis;
         const idx = action.payload.idx;
   
-
+        // if id of selected matches list Item add full list item to results
         function match(element) {
             return element.id === idx;
         }
 
         const newMatch = currentLexis.find(match)
 
-
-
-        // console.log(action.payload);
-
-          return [...state, newMatch];
+        return [...state, newMatch];
         
-
-
       default:
       return state
   }
