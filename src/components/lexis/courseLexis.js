@@ -9,28 +9,52 @@ import { style, popSize } from '../../utils/utils';
 import FilterLink from './filterLink';
 
 import { getVisibility } from '../selectors/filter';
+// import Checker from './checker';
 
 class CourseLexis extends React.Component {
 
-  handleGetVisibility = (filter, title) => {
+  // state = {
+  // }
+
+
+  
+
+  handleGetVisibility = (addFilter, addTitle) => {
 
     const list = this.props.lexis;
+    const filter = this.props.lexisFilter;
+    const title = this.props.lexisSelectedReducer
     getVisibility(list, filter, title); //updates the list based on filters
-    this.props.setFilter(filter, title); //sets store reducer for filter
+    this.props.setFilter(addFilter, addTitle); //sets store reducer for filter
 
   }
 
 
   handleOnClick = (e, data) => {
 
-    const activeTarget = e.target.parentNode.parentNode;
+    // const activeTarget = e.target.parentNode;
+    // console.log(activeTarget)
     this.props.saveSelection(data); // saves selection to redux store
+  
+  //   this.setState( () => {
+  //     return { 
+  //         active: !this.state.active 
+  //     }
+  // })
+
+  // console.log()
+  
+
+    // console.log(this.state.active)
+    // console.log(e.target)
+
     
-    if (data.checked) {
-      return activeTarget.className += " active";
-    } else {
-      return activeTarget.classList.remove("active");
-    }
+
+    // if (data.checked) {
+    //   return activeTarget.className += " active";
+    // } else {
+    //   return activeTarget.classList.remove("active");
+    // }
 
   }
 
@@ -50,39 +74,57 @@ class CourseLexis extends React.Component {
 
   renderList = (lexis) => {
 
-    return lexis.map((item, key) => {
-    
-      const title = (
-        <Grid.Column >
-          <div className="lexis-guide" >
-            <Checkbox label={item.word} idx={item.id} onClick={this.handleOnClick} />
+    console.log('renderListFiring')
+
+    if (lexis.length === 0) {
+      return <p>Please make different selections</p>
+      // console.log(lexis.length);
+    } else {
+      return lexis.map((item, key) => {
+
+        // console.log('item: ', item)
+
+        // this.setState((prevState, props) => ({
+        //   count: prevState.count + props.increment
+        // }));
+        
+        // console.log(this.props.lexisSelect.includes(item));
+
+        const title = (
+          <Grid.Column >
+            <div className="lexis-guide" >
+              <Checkbox className='list-item' checked={this.props.lexisSelect.includes(item)} label={item.word} idx={item.id} onClick={this.handleOnClick} />
+            </div>
+          </Grid.Column>
+        )
+
+        const pos = (
+          `( ${item.pos} )`
+        )
+
+        const popup = (
+          <div className="pop-up">
+            <h4>{item.word} {item.pos ? pos : ''} </h4>
+            <p>{item.etymology}</p>
+            {item.application ? <div><h5>Application</h5><ul>{this.applicationList(item.application)}</ul></div> : ''}
           </div>
-        </Grid.Column>
-      )
+        )
 
-      const pos = (
-        `( ${item.pos} )`
-      )
+        const template = (
+          <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
+        )
 
-      const popup = (
-        <div className="pop-up">
-          <h4>{item.word} {item.pos ? pos : ''} </h4>
-          <p>{item.def}</p>
-          {item.app ? <div><h5>Application</h5><ul>{this.applicationList(item.app)}</ul></div> : ''}
-        </div>
-      )
+        // console.log(template);
+        return template
 
-      const template = (
-        <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
-      )
-
-      return template
-
-    });  // close your map
+      });  // close your map
+    } //else close
   };  // close renderList
 
 
   render() {
+
+    
     return (
       <Grid id="words" className="lexis">
         <Grid.Row>
@@ -96,13 +138,17 @@ class CourseLexis extends React.Component {
           <div>
             Filters:
             <FilterLink filter='SHOW_ALL' title='all' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_CITY' title='city' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_NAME' title='name' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_PIE' title='pie' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_PERSON' title='person' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_COMMON' title='common' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_DEVICE' title='device' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_ESSENTIAL' title='essential' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_CONCEPT' title='concept' onClick={this.handleGetVisibility} />
+            <FilterLink filter='SHOW_EVENT' title='event' onClick={this.handleGetVisibility} />
+
           </div>
 
           {this.renderList(this.props.lexis)}
-    
+
         </Grid.Row>
       </Grid>
     );
@@ -114,8 +160,11 @@ class CourseLexis extends React.Component {
 
 const mapStateToProps = state => {
   return ({
-    lexis: getVisibility(state.lexis, state.lexisFilterReducer, null),
-    lexisFilter: state.lexisFilterReducer
+    lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),
+    lexisSelect: state.lexisSelect,
+    lexisFilter: state.lexisFilterReducer,
+    lexisSelectedReducer: state.lexisSelectedReducer
+
   })
 }
 

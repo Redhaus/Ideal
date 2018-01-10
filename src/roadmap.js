@@ -26,6 +26,32 @@
 
 
 // BENJAMIN LIST - TO BE IMPROVED
+
+// COMPLETED
 // lexisSelectReducer.js - make it so that if checked it will add to results if not it will remove from results currently it adds for every click
 
+// COMPLETED
 //filter.js and courseLexis.js getVisibility function accepts filter var such as 'SHOW_ALL' but needs to be able to filter by array ['SHOW_NAME', 'SHOW_PIE']
+
+
+// multiselector implemented but selected list results requires id to works
+
+// COMPLETED
+// once filtered, selctions are not working correctly caused by selectedReducer resetting to all
+// could be due to need for inputs to be controlled by state
+// checked={false}  make this dynamic and connected to state
+
+// filter buttons need to be style to show their toggle state.
+
+// Add reset button 
+
+// Preference become check boxes
+
+// Base goals dont need to be check boxes
+
+// lexis icons visible so redesign layout 
+
+// Remove summer reading and make it part of previous knowledge 
+
+// Break into teacher and student version 
+

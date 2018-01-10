@@ -7,11 +7,11 @@ export const saveSelection = (select) => {
       }
     }
 
-export const setFilter = (filter, title) => {
+export const setFilter = (addFilter, addTitle) => {
 
     return {
         type: 'VISIBILITY_FILTER',
-        filter: filter,
-        title: title
+        filter: addFilter,
+        title: addTitle
         }
     }

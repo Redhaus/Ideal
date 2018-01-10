@@ -5,11 +5,13 @@ import lexis from './lexisReducer';
 import lexisSelect from './lexisSelectReducer';
 import lexisFilterReducer from './lexisFilterReducer';
 import { combineReducers } from 'redux';
+import lexisSelectedReducer from './lexisSelectedFilters';
 
 const rootReducer = combineReducers({
-    lexis: lexis,
-    lexisSelect: lexisSelect,
-    lexisFilterReducer: lexisFilterReducer
+    lexis: lexis, // this is the lexis guide
+    lexisSelect: lexisSelect, // these are selected items for results
+    lexisFilterReducer: lexisFilterReducer, // SHOW ALL
+    lexisSelectedReducer: lexisSelectedReducer //all
 })
 
 export default rootReducer;

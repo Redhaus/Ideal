@@ -1,4 +1,5 @@
 import Store from '../store';
+import _ from 'lodash';
 // import _ from 'lodash';
   
 // this collects all lexis select results
@@ -10,15 +11,23 @@ import Store from '../store';
         const appStore = Store.getState();
         const currentLexis = appStore.lexis;
         const idx = action.payload.idx;
+        // const newState = []
+        
   
         // if id of selected matches list Item add full list item to results
         function match(element) {
-            return element.id === idx;
+            return  element.id === idx;
         }
 
-        const newMatch = currentLexis.find(match)
+        const newState = currentLexis.find(match)
 
-        return [...state, newMatch];
+        //if state already contains item and it is selected again remove from list
+        if(state.includes(newState)){
+          return _.without(state, newState);
+        }
+      
+
+        return [...state, newState];
         
       default:
       return state

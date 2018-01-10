@@ -53,7 +53,7 @@ class Home extends Component {
 
               <div>
                 <h4>LEXIS RESULTS</h4>
-                <LexisResults />
+               {this.props.lexisResults > 0 ? <LexisResults /> : ''} 
                 {/* <PhotoGallery /> */}
 
 
@@ -76,6 +76,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
+  results: state.LexisResults,
   word: state.lexis.word,
   def: state.lexis.def,
   selected: state.lexis.selected

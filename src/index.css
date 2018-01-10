@@ -103,14 +103,6 @@ button:disabled {
 
 
 
-.lexis-guide{
-  padding: 2px 4px 2px 4px;
-}
-
-.lexis-guide:hover{
-  background-color: #f2f2f0;
-}
-
 .further-reading h5{
   margin-bottom: 5px;
 }
@@ -289,3 +281,25 @@ button:disabled {
 .summer-reading h4 {
   color: #373737;
 }
+
+.list-item{
+  width: 100%;
+  padding: 2px 4px 2px 4px;
+  
+}
+
+.list-item:hover{
+  background-color: #f2f2f0;
+}
+
+.checked{
+  background-color: #f2f2f0;
+}
+
+/* 
+.lexis-guide{
+} */
+
+/* .lexis-guide:hover{
+  background-color: #f2f2f0;
+} */
