@@ -1,64 +1,39 @@
 import React from 'react'
-import { Grid, Popup, Checkbox } from 'semantic-ui-react'
 
+// Redux / Action / Selector Imports
 import { connect } from 'react-redux';
 import * as actions from '../../actions/action';
 import { bindActionCreators } from 'redux'
-
-import { style, popSize } from '../../utils/utils';
-import FilterLink from './filterLink';
-
 import { getVisibility } from '../selectors/filter';
-// import Checker from './checker';
+
+// Layout
+import { Grid, Popup, Checkbox, Icon } from 'semantic-ui-react'
+import { style, popSize } from '../../utils/utils';
+
+// Component imports
+import FilterGroup from './filterGroup';
+
+
+// icons
+// person - user circle / male / id card outline  / address card
+// common - copyright / repeat  
+// device - low vision / road / file image outline / write / wizard 
+// essential - linkify /  key 
+// concept - lightbulb
+// event - checked calendar / calendar outline / calendar 
+
 
 class CourseLexis extends React.Component {
 
-  // state = {
-  // }
-
-
-  
-
-  handleGetVisibility = (addFilter, addTitle) => {
-
-    const list = this.props.lexis;
-    const filter = this.props.lexisFilter;
-    const title = this.props.lexisSelectedReducer
-    getVisibility(list, filter, title); //updates the list based on filters
-    this.props.setFilter(addFilter, addTitle); //sets store reducer for filter
-
-  }
-
-
+  // saves checkbox selection to redux store
   handleOnClick = (e, data) => {
-
-    // const activeTarget = e.target.parentNode;
-    // console.log(activeTarget)
-    this.props.saveSelection(data); // saves selection to redux store
-  
-  //   this.setState( () => {
-  //     return { 
-  //         active: !this.state.active 
-  //     }
-  // })
-
-  // console.log()
-  
-
-    // console.log(this.state.active)
-    // console.log(e.target)
-
+    console.log(e.target.parentNode.parentNode.parentNode)
+    this.props.saveSelection(data); 
     
-
-    // if (data.checked) {
-    //   return activeTarget.className += " active";
-    // } else {
-    //   return activeTarget.classList.remove("active");
-    // }
-
   }
 
 
+  // iterates through application list of lexis for each word
   applicationList = (app) => {
 
     return app.map((item, key) => {
@@ -71,29 +46,80 @@ class CourseLexis extends React.Component {
     })
   }
 
+  iconHighlight = (item, icon, key) => {
+    if(this.props.lexisSelectedReducer.includes(item)){
+      return <Icon className='activeIcon' key={key} name={icon}/> 
+    }else{
+      return <Icon key={key} name={icon}/> 
+    }
 
+    // return false;
+  }
+
+
+
+  icon = (icons) => {
+    // console.log(this.props.lexisSelectedReducer)
+
+    
+
+    return icons.map( (item, key) => {
+      // console.log(item);
+      switch (item) {
+
+        case 'person':
+          
+          return this.iconHighlight(item, "user outline", key )
+  
+        case 'common':
+        
+          return this.iconHighlight(item, "copyright", key )
+
+        case 'device':
+          return this.iconHighlight(item, "low vision", key )
+         
+
+        case 'essential':
+          return this.iconHighlight(item, "key", key )
+
+        case 'concept':
+          return this.iconHighlight(item, "lightbulb", key )
+
+        case 'event':
+          return this.iconHighlight(item, "calendar outline", key )
+      
+        default:
+          break;
+      }
+
+      return false;
+      
+    })
+  }
+
+
+  // renders list based on filtered lexis it is given
   renderList = (lexis) => {
 
-    console.log('renderListFiring')
 
+    // if list doesn't have any words tell user to make new selection
     if (lexis.length === 0) {
       return <p>Please make different selections</p>
-      // console.log(lexis.length);
     } else {
       return lexis.map((item, key) => {
 
-        // console.log('item: ', item)
 
-        // this.setState((prevState, props) => ({
-        //   count: prevState.count + props.increment
-        // }));
-        
-        // console.log(this.props.lexisSelect.includes(item));
+        // if the selected lexis array contains item.word add active class 
+        const active = this.props.lexisSelect.some((e) => e.word === item.word) ? 'active' : '';
 
         const title = (
-          <Grid.Column >
+          <Grid.Column className={`lex ${active}`}>
             <div className="lexis-guide" >
-              <Checkbox className='list-item' checked={this.props.lexisSelect.includes(item)} label={item.word} idx={item.id} onClick={this.handleOnClick} />
+              <span><Checkbox className='list-item' checked={this.props.lexisSelect.includes(item)} label={item.word} idx={item.id} onClick={this.handleOnClick} />
+               <span className="hard-right"> {this.icon(item.icons)} </span>
+              </span>
+             
+            
             </div>
           </Grid.Column>
         )
@@ -102,10 +128,12 @@ class CourseLexis extends React.Component {
           `( ${item.pos} )`
         )
 
+
         const popup = (
           <div className="pop-up">
-            <h4>{item.word} {item.pos ? pos : ''} </h4>
+            <h4>{item.word} {item.pos ? pos : ''} <span className="hard-right">{this.icon(item.icons)}</span></h4>
             <p>{item.etymology}</p>
+            
             {item.application ? <div><h5>Application</h5><ul>{this.applicationList(item.application)}</ul></div> : ''}
           </div>
         )
@@ -114,17 +142,15 @@ class CourseLexis extends React.Component {
           <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
         )
 
-        // console.log(template);
         return template
 
       });  // close your map
-    } //else close
+    } // else close
   };  // close renderList
 
 
   render() {
 
-    
     return (
       <Grid id="words" className="lexis">
         <Grid.Row>
@@ -133,19 +159,15 @@ class CourseLexis extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row columns={2} className="lexis-cols list">
+        <Grid.Row columns={5} className="lexis-cols list">
 
-          <div>
-            Filters:
-            <FilterLink filter='SHOW_ALL' title='all' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_PERSON' title='person' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_COMMON' title='common' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_DEVICE' title='device' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_ESSENTIAL' title='essential' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_CONCEPT' title='concept' onClick={this.handleGetVisibility} />
-            <FilterLink filter='SHOW_EVENT' title='event' onClick={this.handleGetVisibility} />
 
-          </div>
+
+
+
+        <div className="filter-group">
+        <FilterGroup  />
+        </div>
 
           {this.renderList(this.props.lexis)}
 
@@ -154,8 +176,6 @@ class CourseLexis extends React.Component {
     );
   }
 }
-
-
 
 
 const mapStateToProps = state => {
@@ -173,7 +193,23 @@ const mapDispatchToProps = (dispatch) => ({
   setFilter: bindActionCreators(actions.setFilter, dispatch)
 })
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(CourseLexis)
 
+
+
+
+
+// <Icon name="male"/>
+// <Icon name="user circle"/>
+// <Icon name="id card outline"/>
+// <Icon name="address card"/>
+// <Icon name="repeat"/>
+// <Icon name="low vision"/>
+// <Icon name="road"/>
+// <Icon name="file image outline"/>
+// <Icon name="write"/>
+// <Icon name="wizard"/>
+// <Icon name="linkify"/>
+// <Icon name="checked calendar"/>
+// <Icon name="calendar"/>
 

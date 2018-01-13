@@ -50,6 +50,9 @@ import _ from 'lodash';
 
             case 'SHOW_EVENT':
               return stateUpdate(state, 'SHOW_EVENT');
+
+            case 'SHOW_RESET':
+              return stateUpdate(state, 'SHOW_RESET');
               
             default:
               return ['SHOW_ALL']

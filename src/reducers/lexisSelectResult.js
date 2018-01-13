@@ -28,6 +28,9 @@ import _ from 'lodash';
       
 
         return [...state, newState];
+
+      case 'RESET':
+        return []
         
       default:
       return state

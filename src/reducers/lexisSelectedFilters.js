@@ -51,18 +51,21 @@ export default (state = ['all'], action) => {
           case 'event':
             return stateUpdate(state, 'event');
 
+          case 'reset':
+            return ['all'];
+
         // case 'reset':
         //     return stateUpdate(state, 'reset');
             
           default:
-            return ['all']
+            return state
       }
        
       
 
       
     default:
-    return ['all']
+    return state
 }
 
 

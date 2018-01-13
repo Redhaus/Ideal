@@ -1,4 +1,5 @@
 
+
 export const saveSelection = (select) => {
 
     return {
@@ -6,6 +7,14 @@ export const saveSelection = (select) => {
         payload: select
       }
     }
+
+
+export const clearSelectedLexis = () => {
+    return {
+        type: 'RESET'
+    
+    }
+}
 
 export const setFilter = (addFilter, addTitle) => {
 
@@ -15,3 +24,6 @@ export const setFilter = (addFilter, addTitle) => {
         title: addTitle
         }
     }
+
+
+

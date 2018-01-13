@@ -21,18 +21,18 @@ firebase.initializeApp(config);
 
 
 
-// RETRIEVE DATA
+// // RETRIEVE DATA
 const  firestore = firebase.firestore();//
 const docRef = firestore.collection("unitOneLexis");
 
 
 docRef.get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    // console.log(doc.id);
+    console.log(doc.id);
 
     docRef.doc(doc.id).get().then( () => {
-      // var data = doc.data();
-      // console.log('Word: ', data.word, 'Def: ', data.def);
+      var data = doc.data();
+      console.log('Word: ', data.word, 'Def: ', data.etymology);
     })
       // console.log(`${doc.id} => ${doc.data()}`);
   });

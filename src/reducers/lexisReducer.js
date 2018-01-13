@@ -1,4 +1,5 @@
 import lexisData from '../fixtures/lexisData';
+// import name from 'module';
 
 export default (state = lexisData, action) => {
 

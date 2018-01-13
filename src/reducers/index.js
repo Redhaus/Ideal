@@ -2,7 +2,7 @@
 // This is imported into store
 
 import lexis from './lexisReducer';
-import lexisSelect from './lexisSelectReducer';
+import lexisSelect from './lexisSelectResult';
 import lexisFilterReducer from './lexisFilterReducer';
 import { combineReducers } from 'redux';
 import lexisSelectedReducer from './lexisSelectedFilters';

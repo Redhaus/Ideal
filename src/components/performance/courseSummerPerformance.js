@@ -1,10 +1,9 @@
 import React from 'react'
 import { Grid,  Popup, Divider, Icon } from 'semantic-ui-react'
-import SummerReading from './summerReading';
 import KeyQuestions from './keyQuestions';
 import Performance from './performance';
 import { popSize, style } from '../../utils/utils';
-import {performanceData, performanceRollover, summerData, keyQuestions, keyRollover, firstDay} from '../../fixtures/summerPerformanceData';
+import {performanceData, performanceRollover, keyQuestions, keyRollover, firstDay} from '../../fixtures/summerPerformanceData';
 
 
 const CourseSummerPerformance = () => {
@@ -40,9 +39,7 @@ return (
   <Grid >
     <Grid.Row>
       <Grid.Column width={5}>
-      <div><h4 className="caps">Summer Reading</h4></div>
       
-      <SummerReading books={summerData} /> 
 
       <div>{ handlePopup('Key Questions', keyRollover) }</div>
       

@@ -1,9 +1,10 @@
+import uuid from 'uuid';
 
 const unitOneLexis = [
     {   
 
         word: 'Apollo', 
-        id: '24514',
+        id: uuid(),
 
         pos: 'n.', 
 
@@ -33,7 +34,7 @@ const unitOneLexis = [
 
     {
         word: 'abstract',
-        id: 'asdfh',
+        id: uuid(),
         
         pos: 'adj.',
         variation: ['abstract (v.)', 'abstraction (n.)'],
@@ -63,7 +64,7 @@ const unitOneLexis = [
   
     {
         word: 'alliteration',
-        id: 'ht42qs',
+        id: uuid(),
         
         pos: 'n.',
         variation: ['alliterate (v.)', 'alliterative (adj.)', 'alliteratively (adv.)'],
@@ -94,7 +95,7 @@ const unitOneLexis = [
   
     {
         word: 'allusion',
-        id: 'gfda',
+        id: uuid(),
         
         pos: 'n.',
         variation: ['allude (v.)'],
@@ -119,6 +120,8 @@ const unitOneLexis = [
     },
     {
         word: 'antagonist',
+        id: uuid(),
+        
         pos: 'n.',
         variation: ['antagonize (v.)', 'antagonistic (adj.)', 'antagonism (n.)'],
 
@@ -148,6 +151,8 @@ const unitOneLexis = [
 
     {
         word: 'archetype',
+        id: uuid(),
+        
         pos: 'n.',
         variation: ['archetypal (adj.)'],
 
@@ -183,6 +188,8 @@ const unitOneLexis = [
     {
 
         word: 'asyndeton',
+        id: uuid(),
+        
         pos: 'n.',
 
         etymology: "“omission of conjunctions, ” 1580s, from Latin, from Greek asyndeton, neuter of asyndetos “unconnected, ” from a-, privative prefix, + syndetos, from syndein “to bind together, ” from syn- “together” + dein “to bind, ” related to desmos “band, ” from de- “to bind.”",
@@ -212,6 +219,7 @@ const unitOneLexis = [
 
     {
         word: 'audience',
+        id: uuid(),
         pos: 'n.',
 
         etymology: "late 1400s, “the action of hearing, ” from Old French audience, from Latin audentia “a hearing, listening, ” from audientum (nominative audiens), present participle of audire “to hear, ” from compound au- dh - “to perceive physically, grasp, ” from root au- “to perceive” (cognates: Greek aisthanesthai “to feel;” Sanskrit avih, Avestan avish “openly, evidently;” Old Church Slavonic javiti “to reveal”). Meaning “formal hearing or reception” is from late 1400s; that of “persons within hearing range, assembly of listeners” is from early 1500s (French audience retains only the older senses).Sense transferred 1855 to “readers of a book.” Audience - participation adj.first recorded 1940.",
@@ -239,6 +247,7 @@ const unitOneLexis = [
 
     {
         word: 'caesura',
+        id: uuid(),
         pos: 'n.',
 
         etymology: "1550s, from Latin caesura, “metrical pause, ” literally “a cutting, ” from past participle stem of caedere “to cut down, ” any pause in the middle of a line of poetry.",
@@ -264,6 +273,7 @@ const unitOneLexis = [
 
     {
         word: 'conceit',
+        id: uuid(),
         pos: 'n.',
 
         etymology: "late 14c., “something formed in the mind, thought, notion, ” from conceiven based on analogy of deceit and receipt.Sense evolved from “something formed in the mind, ” to “fanciful or witty notion” (1510s), to “vanity” (c. 1600) through shortening of self- conceit(1580s).For literature, refers to a motif or trope common in texts.",
@@ -291,6 +301,7 @@ const unitOneLexis = [
 
     {
         word: 'concrete',
+        id: uuid(),
         pos: 'adj.',
         variation: ['concrete (n.)', 'concretize (tr.v.)'],
 
@@ -318,6 +329,7 @@ const unitOneLexis = [
 
     {
         word: 'connotation',
+        id: uuid(),
         pos: 'n.',
         variation: ['connote (v.)', 'connotative (adj.)'],
 
@@ -346,6 +358,7 @@ const unitOneLexis = [
     },
     {
         word: 'constructive',
+        id: uuid(),
         pos: 'adj.',
         variation: ['construct (v.)', 'construct (n.)'],
 
@@ -375,6 +388,7 @@ const unitOneLexis = [
 
     {
         word: 'context',
+        id: uuid(),
         pos: 'n.',
         variation: ['contextualize (tr.v.)', 'contextual (adj.)', 'contextualization (n.)'],
 
@@ -403,6 +417,7 @@ const unitOneLexis = [
 
     {
         word: 'cyclic',
+        id: uuid(),
         pos: 'adj.',
         variation: ['cyclical (adj.)', 'cycle (n.)','cycle (v.)'],
 
@@ -434,6 +449,7 @@ const unitOneLexis = [
 
     {
         word: 'denotation',
+        id: uuid(),
         pos: 'n.',
         variation: ['denote (v.)', 'denotative (adj.)'],
 
@@ -461,6 +477,7 @@ const unitOneLexis = [
 
     {
         word: "deus ex machina",
+        id: uuid(),
         pos: "n.",
 
         etymology: "1690s, from Modern Latin translation of Greek, literally “the god from the machine,” the device by which “gods” were suspended over the stage in Greek theater. The feminine is dea ex machina.",
@@ -487,6 +504,7 @@ const unitOneLexis = [
 
     {
         word: 'dialectic',
+        id: uuid(),
         pos: 'n.',
         variation: ['dialectical (adj.)'],
 
@@ -518,6 +536,7 @@ const unitOneLexis = [
     {
 
         word: 'Dionysus',
+        id: uuid(),
         pos: 'n.',
         variation: ['Dionysian (adj.)'],
 
@@ -545,6 +564,7 @@ const unitOneLexis = [
     {
         
         word: 'dualism',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['dualistic (adj.)'],
@@ -580,6 +600,7 @@ const unitOneLexis = [
         
         {
         word: 'end stop',
+        id: uuid(),
         pos: 'n.', 
         
         variation: ['end stop (v.)', 'end-stopped (adj.)'],
@@ -611,6 +632,7 @@ const unitOneLexis = [
         {
         
         word: 'enjambment',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['enjambed (adj.)', 'enjamb (v.)'],
@@ -638,6 +660,7 @@ const unitOneLexis = [
         
         {
         word: 'epilogue',
+        id: uuid(),
         pos: 'n.',
         
         
@@ -671,6 +694,7 @@ const unitOneLexis = [
         {
         
         word: 'epithet',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['epithetic (adj.)', 'epithetical (adj.)'],
@@ -707,6 +731,7 @@ const unitOneLexis = [
         {
         
         word: 'etiology',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['etiologic (adj.)', 'etiological (adj.)'],
@@ -743,6 +768,7 @@ const unitOneLexis = [
         {
         
         word: 'figurative',
+        id: uuid(),
         pos: 'adj.',
         
         variation: ['figuratively (adj.)', 'figure (n.)'],
@@ -776,6 +802,7 @@ const unitOneLexis = [
         {
         
         word: 'hero',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['heroine (n.)', 'heroic (adj.)'],
@@ -807,6 +834,7 @@ const unitOneLexis = [
         {
         
         word: 'hubris',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['hubristic (adj.)'],
@@ -841,6 +869,7 @@ const unitOneLexis = [
         {
         
         word: 'imagery',
+        id: uuid(),
         pos: 'n. pl.',
         
         variation: ['image (n. sing.)','  imagine (v.)', 'imagistic (adj.)'],
@@ -877,6 +906,7 @@ const unitOneLexis = [
         {
         
         word: 'in medias res',
+        id: uuid(),
         
         etymology: "From Horace, Latin, literally “in the midst of things,” from medias, accusative fem. plural of medius “middle” + accusative plural of res “a thing,” from  re- “to bestow, endow.”",
         
@@ -907,6 +937,7 @@ const unitOneLexis = [
         {
         
         word: 'investigation',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['investigate (v.)', 'investigatory (adj.)'],
@@ -940,6 +971,7 @@ const unitOneLexis = [
         {
         
         word: 'juxtaposition',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['juxtapose (v.)', 'juxtaposed (adj.)'],
@@ -975,6 +1007,7 @@ const unitOneLexis = [
         {
         
         word: 'leitmotif',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "1876, “a musical figure to which some definite meaning is attached,” from German Leitmotiv, literally “lead motive,” from leiten “to lead” + Motivs “motive.” Associated with Wagnerian musical drama.",
@@ -1008,6 +1041,7 @@ const unitOneLexis = [
         {
         
         word: 'liminal',
+        id: uuid(),
         pos: 'adj.',
         
         variation: ['liminary (n.)', 'liminality (n.)'],
@@ -1044,6 +1078,7 @@ const unitOneLexis = [
         {
         
         word: 'line',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "1560s, “any short piece of writing” (especially poetry), from “line” in the sense “row of verse,” attested since late Old English (answering to Latin versus, Greek stikhos). Hence “a few words in writing, a short letter” (1640s); meaning “words of an actor’s part” is from 1882. From 1670s as “outlines, plans” (of a building, ship, etc.); hence, figuratively, “plan, model” of anything (1757). Lines of communication originally were transverse trenches in siegeworks, from “line” in a military sense “trench, rampart,” a collective singular from 1690s given a new currency in World War I.",
@@ -1078,6 +1113,7 @@ const unitOneLexis = [
         {
         
         word: 'line break',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "referring to the space between stanzas in a poem.",
@@ -1103,6 +1139,7 @@ const unitOneLexis = [
         
         {
         word: 'linear',
+        id: uuid(),
         pos: 'adj.',
         
         variation: ['linearity (n.)', 'linearly (adv.)'],
@@ -1136,6 +1173,7 @@ const unitOneLexis = [
         {
         
         word: 'literal',
+        id: uuid(),
         pos: 'adj.',
         
         variation: ['literally (adv.)'],
@@ -1169,6 +1207,7 @@ const unitOneLexis = [
         {
         
         word: 'metaphor',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['metaphorical (adj.)'],
@@ -1207,6 +1246,7 @@ const unitOneLexis = [
         {
         
         word: 'mood',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "“emotional condition, frame of mind,” Old English mod “heart, frame of mind, spirit; courage, arrogance, pride; power, violence,” from Proto-Germanic motha- (cognates: Old Saxon mod “mind, courage,” Old Frisian mod “intellect, mind, intention,” Old Norse moðr “wrath, anger,” Middle Dutch moet, Dutch moed, Old High German muot, German Mut “courage,” Gothic moþs “courage, anger”), of unknown origin. A much more vigorous word in Anglo-Saxon than currently, and used widely in compounds such as modcræftig “intelligent,” modful “proud.” To be in the mood “willing (to do something)” is from 1580s. First record of mood swings is from 1942.",
@@ -1238,6 +1278,7 @@ const unitOneLexis = [
         {
         
         word: 'motif',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "“theme, predominant feature,” 1848, from French motif “dominant idea, theme.”",
@@ -1270,6 +1311,7 @@ const unitOneLexis = [
         {
         
         word: 'myth',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['mythological (adj.)', 'mythic (adj.)'],
@@ -1306,6 +1348,7 @@ const unitOneLexis = [
         {
         
         word: 'non-linear',
+        id: uuid(),
         pos: 'adj.',
         
         variation: ['non-linearly (adv.)', 'non-linearity (n.)'],
@@ -1342,6 +1385,7 @@ const unitOneLexis = [
         
         {
         word: 'nostalgia',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['nostalgic (adj.)'],
@@ -1376,6 +1420,7 @@ const unitOneLexis = [
         
         {
         word: 'omen',
+        id: uuid(),
         pos: 'n.',
         variation: ['ominous (adj.)'],
         
@@ -1411,6 +1456,7 @@ const unitOneLexis = [
         {
         
         word: 'oral tradition',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "Oral tradition and oral lore is cultural material and tradition transmitted orally from one generation to another. The messages or testimony are verbally transmitted in speech or song and may take the form, for example, of folktales, sayings, ballads, songs, or chants. In this way, it is possible for a society to transmit oral history, oral literature, oral law and other knowledges across generations without a writing system.",
@@ -1446,6 +1492,7 @@ const unitOneLexis = [
         
         {
         word: 'personify',
+        id: uuid(),
         pos: 'tr. v.',
         
         variation: ['personification (n.)', 'personified (adj.)'],
@@ -1484,6 +1531,7 @@ const unitOneLexis = [
         {
          
         word: 'plot',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['plot (v.)'],
@@ -1521,6 +1569,7 @@ const unitOneLexis = [
         {
         
         word: 'point of view',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "“position from which a thing is viewed,” 1727, translating French point de vue, a loan-translation of Latin punctum visus. Figurative use is from 1760. The Latin phrase was translated into German as Gesichtspunkt.",
@@ -1557,6 +1606,7 @@ const unitOneLexis = [
         {
         
         word: 'polysyndeton',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "the use of several conjunctions in close succession, especially where some could otherwise be omitted (as in “she tried and failed and tried again”). The word polysyndeton comes from the Greek “poly-,” meaning “many,” and “syndeton,” meaning “bound together with.”",
@@ -1589,6 +1639,7 @@ const unitOneLexis = [
         {
         
         word: 'prologue',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "early 14c., from Old French prologue (12c.) and directly from Latin prologus, from Greek prologos “preface to a play, speaker of a prologue,” literally “a speech beforehand,” from pro- “before” + logos “discourse, speech,” from legein “to speak.”",
@@ -1622,6 +1673,7 @@ const unitOneLexis = [
         {
         
         word: 'protagonist',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "1670s, “principal character in a story, drama, etc.,” from Greek protagonistes “actor who plays the chief or first part,” from protos “first” + agonistes “actor, competitor,” from agon “contest.” Meaning “leading person in any cause or contest” is from 1889. Mistaken sense of “advocate, supporter” (1935) is from misreading of Greek protos as Latin pro- “for.”",
@@ -1657,6 +1709,7 @@ const unitOneLexis = [
         {
         
         word: 'quest',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "c. 1300, “an inquest;” early 14c., “a search for something” (especially of judicial inquiries or hounds seeking game), from Old French queste “search, quest, chase, hunt, pursuit; inquest, inquiry” (12c., Modern French quête), properly “the act of seeking,” and directly from Medieval Latin questa “search, inquiry,” alteration of Latin quaesitus (fem. quaesita) “sought-out, select,” past participle of quaerere “seek, gain, ask.” Romance sense of “adventure undertaken by a knight” (especially the search for the Grail) is attested from late 14c. Johnson’s dictionary has questmonger “Starter of lawsuits or prosecutions.”",
@@ -1692,6 +1745,7 @@ const unitOneLexis = [
         {
         
         word: 'repetition',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['repetitive (adj.)', 'repeat (v.)'],
@@ -1728,6 +1782,7 @@ const unitOneLexis = [
         {
         
         word: 'revolution',
+        id: uuid(),
         pos: 'n.',
         
         variaton: ['revolving (adj.)', 'revolve (v.)'],
@@ -1767,6 +1822,7 @@ const unitOneLexis = [
         {
         
         word: 'rhapsody',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['rhapsodical (adj.)', 'rhapsodize (v.)'],
@@ -1802,6 +1858,7 @@ const unitOneLexis = [
         {
         
         word: 'rhyme',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['rhyming (adj.)', 'rhyme (v.)'], 
@@ -1842,6 +1899,7 @@ const unitOneLexis = [
         {
         
         word: 'rhythm',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['rhythmic(al) (adj.)', 'rhythmically (adv.)'],
@@ -1879,6 +1937,7 @@ const unitOneLexis = [
         {
         
         word: 'setting',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['set (v.)'], 
@@ -1915,6 +1974,7 @@ const unitOneLexis = [
         {
         
         word: 'simile',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "late 14c., from Latin simile “a like thing; a comparison, likeness, parallel,” neuter of similis “like.”",
@@ -1951,6 +2011,7 @@ const unitOneLexis = [
         {
         
         word: 'slant rhyme',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "Half rhyme or slant rhyme is a type of rhyme formed by words with similar but not identical sounds.",
@@ -1978,6 +2039,7 @@ const unitOneLexis = [
         {
         
         word: 'speaker',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "c. 1300, “one who speaks,” agent noun from speak v.. Similar formation in Old Frisian spreker, Old High German sprahhari, German Sprecher.  For literature, refers to the narrator in a poem, the speaker.",
@@ -2013,6 +2075,7 @@ const unitOneLexis = [
         {
         
         word: 'stanza',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['stanzaic (adj.)'],
@@ -2047,6 +2110,7 @@ const unitOneLexis = [
         {
         
         word: 'stock character',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "A stock character is a stereotypical person whom audiences readily recognize from frequent recurrences in a particular literary tradition. Stock characters are archetypal characters distinguished by their flatness. As a result, they tend to be easy targets for parody and to be criticized as clichés. The presence of a particular array of stock characters is a key component of many genres.",
@@ -2074,13 +2138,14 @@ const unitOneLexis = [
         'What is a possible function of a stock character?'
         
         ],
-        icons: ['device', 'essential', 'common', 'person']
+        icons: ['device', 'essential', 'common']
         
         },
         
         {
         
         word: 'symbol',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['symbolic (adj.)', 'symbolize (v.)'], 
@@ -2121,6 +2186,7 @@ const unitOneLexis = [
         {
         
         word: 'text',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['textual (adj.)'],
@@ -2155,6 +2221,7 @@ const unitOneLexis = [
         {
         
         word: 'theme ',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['thematic (adj.)', 'thematize (v.)'],
@@ -2188,6 +2255,7 @@ const unitOneLexis = [
         {
         
         word: 'tone',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['tonal (adj.)', 'tonality (n.)'],
@@ -2222,6 +2290,7 @@ const unitOneLexis = [
         {
         
         word: 'trait',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "late 15c., “shot, missiles;” later “a stroke in drawing, a short line” (1580s), from Middle French trait “line, stroke, feature, tract,” from Latin tractus “drawing, drawing out, dragging, pulling,” later “line drawn, feature,” from past participle stem of trahere “to pull, draw.” Sense of “particular feature, distinguishing quality” in English is first recorded 1752.",
@@ -2255,6 +2324,7 @@ const unitOneLexis = [
         {
         
         word: 'translation',
+        id: uuid(),
         pos: 'n.',
         
         variation: ['translator (n.)', 'translated (adj.)', 'translate (v.)', 'translatable (adj.)'],
@@ -2292,6 +2362,7 @@ const unitOneLexis = [
         {
         
         word: 'trope',
+        id: uuid(),
         pos: 'n.',
         
         etymology: "1530s, from Latin tropus “a figure of speech,” from Greek tropos “a turn, direction, course, way; manner, fashion,” in rhetoric, “turn or figure of speech,” related to trope “a turning” and trepein “to turn,” from  root trep- “to turn”.",

@@ -1,11 +1,11 @@
 
-const admin = require('../node_modules/firebase-admin');
+const admin = require('../../node_modules/firebase-admin');
 
 // import serviceAccount from '../key/service-key';
-const serviceAccount = require("../src/key/service-key.json");
+const serviceAccount = require("../../src/key/service-key.json");
 
 // const data = require("../src/fixtures/lexisDataTest.json");
-const data = require("../src/fixtures/readingDataTest.json");
+const data = require("../../src/fixtures/lexis.json");
 
 
 admin.initializeApp({

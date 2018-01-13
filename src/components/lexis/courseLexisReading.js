@@ -12,10 +12,12 @@ const CourseLexisReading = (props) => {
 return(
   <Grid>
     <Grid.Row>
-      <Grid.Column width={5}>
+      <Grid.Column width={16}>
         <CourseLexis   words={lexisOne}/>
       </Grid.Column>
-      <Grid.Column width={11}>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Column width={16}>
         <CourseFurtherReadings readings={readings.unitOne.further.category}/>
       </Grid.Column>
     </Grid.Row>

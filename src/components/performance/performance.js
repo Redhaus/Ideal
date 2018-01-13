@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Checkbox } from 'semantic-ui-react';
+import { handleOnClick } from '../../utils/utils';
 
 
 const Performance = (props) => {
@@ -11,14 +12,16 @@ const Performance = (props) => {
 
             const title = (
                 <Grid.Column key={key}>
+                
                     <div className="performance">
-                    <h4>{item.header}</h4>
+                    <h4><Checkbox label={item.header} onClick={handleOnClick} /></h4>
                     <div>{item.description}</div>
                     </div>
                 </Grid.Column>   
             )
-                
-            return title;
+                        
+
+            return title ;
 
         })
 

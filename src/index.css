@@ -115,6 +115,26 @@ button:disabled {
   background-color: #f2f2f0;
 }
 
+.lex {
+  padding: 5px 0px;
+  border-bottom: 1px solid #f2f2f0;
+}
+
+.lex:hover{
+  background-color: #f2f2f0;
+}
+
+.lex .active{
+  background-color: #f2f2f0;
+}
+
+.filter-group {
+  padding-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
 .field label.active {
   background-color: inherit;
 }
@@ -283,8 +303,9 @@ button:disabled {
 }
 
 .list-item{
-  width: 100%;
+  /* width: 100%; */
   padding: 2px 4px 2px 4px;
+  float: left;
   
 }
 
@@ -296,6 +317,10 @@ button:disabled {
   background-color: #f2f2f0;
 }
 
+.activeIcon{
+  color: green;
+}
+
 /* 
 .lexis-guide{
 } */
@@ -303,3 +328,31 @@ button:disabled {
 /* .lexis-guide:hover{
   background-color: #f2f2f0;
 } */
+
+button{
+ 
+  color: red;
+  transition: all 0.3s ease 0s;
+
+}
+
+
+button[title]:hover:after {
+  
+  content: attr(title);
+  padding-left: 5px;
+  color: black;
+  
+}
+
+button.active[title]:after  {
+  content: attr(title);
+  padding-left: 5px;
+  /* position: absolute; */
+  color: white;
+  
+}
+
+.hard-right{
+  float: right;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Popup, Checkbox } from 'semantic-ui-react';
+import { Grid, Popup } from 'semantic-ui-react';
 import { handleOnClick, style, popSize } from '../../utils/utils';
 
 
@@ -8,20 +8,22 @@ const BaseGoals = (props) => {
 
     const renderGoals = (goals) => {
 
+        // <Checkbox label={item.title} desc={item.goal} onClick={handleOnClick} /> 
+        
         return goals.map( (item, key) => {
 
             const title = (
                 <Grid.Column >
                     <div className="base-goals">
-                    <Checkbox label={item.goal} desc={item.standards} onClick={handleOnClick} /> 
+                    <span onClick={handleOnClick}>{item.title}</span>
                     </div>
                 </Grid.Column>   
             )
                 
             const popup = (
                 <div>
-                    <h4>Common Core Standards</h4>
-                    <p>{item.standards}</p>
+                    <h4>{item.title}</h4>
+                    <p>{item.goal}</p>
                  </div>
             )
                 
