@@ -139,7 +139,7 @@ class CourseLexis extends React.Component {
         )
 
         const template = (
-          <Popup key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
+          <Popup wide="true" key={key} trigger={title} content={popup} size={popSize} style={style} inverted />
         )
 
         return template
