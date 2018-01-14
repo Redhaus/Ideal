@@ -10,7 +10,7 @@ class LexisResults extends React.Component {
 
         return app.map((item, key) => {
             const list = (
-                <p key={key}>{item}</p>
+                <li key={key}>{item}</li>
             )
             return list;
         })
@@ -26,8 +26,15 @@ class LexisResults extends React.Component {
             const wordGuide = (
                 <div key={key} className="top-padding">
                     <h3>{item.word} {item.pos}</h3>
-                    <p><strong>variations</strong></p>
-                    {this.applicationList(item.variation)}
+
+                    {item.variation 
+                        ? <div><p><strong>variations</strong></p>
+                        <ul>{this.applicationList(item.variation)}</ul></div>
+                        : ''
+                    }
+                    
+                    
+
                     <p><strong>etymology</strong></p>
                     <p>{item.application}</p>
 
@@ -37,10 +44,14 @@ class LexisResults extends React.Component {
                     <p>{item.author} | {item.book}</p>
 
                     <p><strong>application</strong></p>
+                    <ul>
                     {this.applicationList(item.application)}
+                    </ul>
 
                     <p><strong>key questions</strong></p>
+                    <ul>
                     {this.applicationList(item.questions)}
+                    </ul>
                     <Divider />
 
 
@@ -53,6 +64,7 @@ class LexisResults extends React.Component {
     };  // close renderList
 
     render() {
+        
         return (
             <div>{this.renderList(this.props.lexisSelect)}</div>
         );
@@ -60,9 +72,16 @@ class LexisResults extends React.Component {
 }
 
 
-const mapStateToProps = state => ({
-    lexisSelect: state.lexisSelect
-})
+
+const mapStateToProps = state => {
+    return ({
+      // lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),
+      lexisSelect: state.lexisSelect,
+      lexisFilter: state.lexisFilterReducer,
+      lexisSelectedReducer: state.lexisSelectedReducer
+  
+    })
+  }
 
 export default connect(mapStateToProps)(LexisResults)
 

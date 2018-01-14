@@ -121,8 +121,8 @@ class FilterGroup extends Component {
     render() {
         return (
 
-            <div>
-                Filters:
+            <div className="ed">
+                <span>Filters:</span>
                 <FilterLink on={this.state.all} icon='list ul' filter='SHOW_ALL' title='all' onClick={this.handleSetFilter} />
                 <FilterLink on={this.state.person} icon='user outline circle' filter='SHOW_PERSON' title='person' onClick={this.handleSetFilter} />
                 <FilterLink on={this.state.common} icon='copyright' filter='SHOW_COMMON' title='common' onClick={this.handleSetFilter} />
@@ -131,7 +131,7 @@ class FilterGroup extends Component {
                 <FilterLink on={this.state.concept} icon='lightbulb' filter='SHOW_CONCEPT' title='concept' onClick={this.handleSetFilter} />
                 <FilterLink on={this.state.event} icon='calendar outline' filter='SHOW_EVENT' title='event' onClick={this.handleSetFilter} />
                 <FilterLink on={this.state.reset} icon='remove' filter='SHOW_RESET' title='reset' onClick={this.handleReset} />
-                
+    
             </div>
 
         );

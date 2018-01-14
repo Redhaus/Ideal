@@ -5,6 +5,11 @@ import baseGoalsData from '../../fixtures/baseGoalsData';
 import { segueData, quoteData, baseData } from '../../fixtures/quoteSegue';
 import { style } from '../../utils/utils';
 import UnitImage from './unitImage';
+import strauss1 from '../../images/strauss1.jpg';
+import strauss2 from '../../images/strauss2.jpg';
+import strauss3 from '../../images/strauss3.jpg';
+// import strauss3 from '../../images/strauss3.jpg';
+
 
 
 const CourseBaseSegue = () => {
@@ -46,7 +51,7 @@ const CourseBaseSegue = () => {
         </Grid.Column>
 
         <Grid.Column width={6}>
-          <UnitImage img='https://ichef.bbci.co.uk/images/ic/1200x675/p01jxvfv.jpg' quote={quoteData.quote} author={quoteData.author} />
+          <UnitImage img1={strauss1} img2={strauss2} img3={strauss3} img='https://ichef.bbci.co.uk/images/ic/1200x675/p01jxvfv.jpg' quote={quoteData.quote} author={quoteData.author} />
         </Grid.Column>
       </Grid.Row>
     </Grid>

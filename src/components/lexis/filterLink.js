@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'semantic-ui-react';
+import {Button, Icon} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 
@@ -22,10 +22,20 @@ class FilterLink extends React.Component {
     render() {
   
         return (
-        <Button title={this.props.title} icon={this.props.icon}  toggle active={this.props.on} onClick={ this.handleOnClick }/>
+      
+        <Button toggle onClick={ this.handleOnClick } active={this.props.on} className="sm" icon>
+        <Icon className="ico" name={this.props.icon} />
+        <span className="nfo">{this.props.title}</span>
+        </Button>
+
+
+
         )
     }
 };
+
+
+
 
 
 const mapStateToProps = (state, props) => {
@@ -38,3 +48,32 @@ const mapStateToProps = (state, props) => {
 
 
 export default connect(mapStateToProps)(FilterLink); 
+
+
+
+// works
+// <Button 
+// title={this.props.title} 
+// icon={this.props.icon}  
+// toggle 
+// active={this.props.on} 
+// onClick={ this.handleOnClick }
+// />
+// 
+
+
+// <ul class="ed">
+// <li class="sm">
+//     <a class="ico icon-like" href="#"><i>Like</i></a>
+//     <i class="nfo">29 Likes</i>
+// </li>
+// <li class="sm">
+//     <a class="ico icon-chat" href="#"><i>Comment</i></a>
+//     <i class="nfo">2 Comments</i>
+// </li>
+// <li>
+//     <b class="ico icon-tags"><i>Tags</i></b> 
+//     <a href="#">design</a>, 
+//     <a href="#">link</a>
+// </li>
+// </ul>

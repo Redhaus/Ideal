@@ -52,8 +52,8 @@ class Home extends Component {
 
 
               <div>
-                <h4>LEXIS RESULTS</h4>
-               {this.props.lexisResults > 0 ? <LexisResults /> : ''} 
+               {this.props.lexisSelect.length > 0 
+                ?  <div><h4>LEXIS RESULTS</h4> <LexisResults /> </div> : ''} 
                 {/* <PhotoGallery /> */}
 
 
@@ -75,22 +75,24 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  results: state.LexisResults,
-  word: state.lexis.word,
-  def: state.lexis.def,
-  selected: state.lexis.selected
-})
+
+const mapStateToProps = state => {
+  return ({
+    // lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),
+    lexisSelect: state.lexisSelect,
+    lexisFilter: state.lexisFilterReducer,
+    lexisSelectedReducer: state.lexisSelectedReducer
+
+  })
+}
+
 
 
 const mapDispatchToProps = (dispatch) => ({
   saveSelection: bindActionCreators(saveSelection, dispatch)
-})
+}) 
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home)
+export default connect(mapStateToProps,mapDispatchToProps)(Home)
 
 
 

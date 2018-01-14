@@ -26,7 +26,7 @@ const CourseFurtherReadings = (props) => {
             <a href={item.link} target="blank">
                 <Icon size={iconSize}
                   color={iconColor}
-                  name="download"
+                  name="external"
                   link
                   className="icon-right" />
             </a>

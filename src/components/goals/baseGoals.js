@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Popup } from 'semantic-ui-react';
 import { handleOnClick, style, popSize } from '../../utils/utils';
-
+// import Slider from 'react-slick';
 
 const BaseGoals = (props) => {
 

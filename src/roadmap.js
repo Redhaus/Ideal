@@ -70,6 +70,15 @@
 // COMPLETED
 // multiselector implemented but selected list results requires id to works
 
+// COMPLETED
+// Animte buttons
+
+// COMPLETED
+// use this https://www.npmjs.com/package/react-slick
+// ini base or image
+// make quote a carosel
+
+
 // Break into teacher and student version 
 
 // Convert all sections to have results with reducers tracking content
@@ -78,6 +87,5 @@
 
 // make sections collapseable
 
-// make quote a carosel
 
 // NOTES
